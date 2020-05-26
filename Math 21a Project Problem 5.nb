@@ -1,0 +1,840 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     50379,        832]
+NotebookOptionsPosition[     50017,        814]
+NotebookOutlinePosition[     50371,        830]
+CellTagsIndexPosition[     50328,        827]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+5) (1 point)  A new knot of your choice.
+
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.689779271908917*^9, 3.689779273203767*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"knot", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Sin", "[", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"Sin", "[", "t", "]"}], "]"}], "]"}], "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{
+          RowBox[{"7", "t"}], "-", "1"}], "]"}]}], ",", 
+       RowBox[{"Cos", "[", 
+        RowBox[{
+         RowBox[{"6", "t"}], "+", "1"}], "]"}], ",", 
+       RowBox[{"1.2", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"t", "+", "1.1"}], "]"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", 
+       RowBox[{"2", "Pi"}], ",", 
+       RowBox[{"2", 
+        RowBox[{"Pi", "/", "300"}]}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Knot", "=", 
+  RowBox[{"Graphics3D", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"Magenta", ",", 
+      RowBox[{"Tube", "[", 
+       RowBox[{"knot", ",", "0.02"}], "]"}]}], "}"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.689780700826228*^9, 3.689780717356786*^9}, {
+  3.689780753105515*^9, 3.6897807820577717`*^9}, {3.6897808628626823`*^9, 
+  3.689780896097748*^9}, {3.689780967256761*^9, 3.689781226942829*^9}, {
+  3.6897812633052197`*^9, 3.689781280054472*^9}, {3.6897813286380568`*^9, 
+  3.689781503778163*^9}}],
+
+Cell[BoxData[
+ Graphics3DBox[
+  {RGBColor[1, 0, 1], 
+   TubeBox[NCache[{{Cos[1] + Sin[1], Cos[1], 1.0694488320737225`}, {
+      Cos[1 + Rational[-7, 150] Pi] + Sin[Cos[Sin[Rational[1, 150] Pi]]], Cos[
+       1 + Rational[1, 25] Pi], 1.0806135647908695`}, {
+      Cos[1 + Rational[-7, 75] Pi] + Sin[Cos[Sin[Rational[1, 75] Pi]]], Cos[
+       1 + Rational[2, 25] Pi], 1.0913043046838868`}, {
+      Cos[1 + Rational[-7, 50] Pi] + Sin[Cos[Sin[Rational[1, 50] Pi]]], Cos[
+       1 + Rational[3, 25] Pi], 1.1015163624409254`}, {
+      Cos[1 + Rational[-14, 75] Pi] + Sin[Cos[Sin[Rational[2, 75] Pi]]], Cos[
+       1 + Rational[4, 25] Pi], 1.1112452587159412`}, {
+      Cos[1 + Rational[-7, 30] Pi] + Sin[Cos[Sin[Rational[1, 30] Pi]]], Cos[
+       1 + Rational[1, 5] Pi], 1.120486726093485}, {
+      Sin[1 + Rational[11, 50] Pi] + Sin[Cos[Sin[Rational[1, 25] Pi]]], Cos[
+       1 + Rational[6, 25] Pi], 1.1292367109605315`}, {
+      Sin[1 + Rational[13, 75] Pi] + Sin[Cos[Sin[Rational[7, 150] Pi]]], -
+       Sin[1 + Rational[-11, 50] Pi], 1.1374913752845286`}, {
+      Sin[1 + Rational[19, 150] Pi] + Sin[Cos[Sin[Rational[4, 75] Pi]]], -
+       Sin[1 + Rational[-9, 50] Pi], 1.1452470982968843`}, {
+      Sin[1 + Rational[2, 25] Pi] + Sin[Cos[Sin[Rational[3, 50] Pi]]], -
+       Sin[1 + Rational[-7, 50] Pi], 1.1525004780811567`}, {
+      Sin[1 + Rational[1, 30] Pi] + Sin[Cos[Sin[Rational[1, 15] Pi]]], -
+       Sin[1 + Rational[-1, 10] Pi], 1.1592483330652454`}, {
+      Sin[1 + Rational[-1, 75] Pi] + Sin[Cos[Sin[Rational[11, 150] Pi]]], -
+       Sin[1 + Rational[-3, 50] Pi], 1.1654877034169364`}, {
+      Sin[1 + Rational[-3, 50] Pi] + Sin[Cos[Sin[Rational[2, 25] Pi]]], -
+       Sin[1 + Rational[-1, 50] Pi], 1.1712158523421796`}, {
+      Sin[1 + Rational[-8, 75] Pi] + Sin[Cos[Sin[Rational[13, 150] Pi]]], -
+       Sin[1 + Rational[1, 50] Pi], 1.17643026728554}, {
+      Sin[1 + Rational[-23, 150] Pi] + Sin[Cos[Sin[Rational[7, 75] Pi]]], -
+       Sin[1 + Rational[3, 50] Pi], 1.1811286610322849`}, {
+      Sin[1 + Rational[-1, 5] Pi] + 
+       Sin[Cos[Rational[1, 4] (-1 + 5^Rational[1, 2])]], -
+       Sin[1 + Rational[1, 10] Pi], 1.1853089727116337`}, {
+      Sin[1 + Rational[-37, 150] Pi] + Sin[Cos[Sin[Rational[8, 75] Pi]]], -
+       Sin[1 + Rational[7, 50] Pi], 
+       1.1889693687007237`}, {-Cos[1 + Rational[31, 150] Pi] + 
+       Sin[Cos[Sin[Rational[17, 150] Pi]]], -Sin[1 + Rational[9, 50] Pi], 
+       1.192108243428896}, {-Cos[1 + Rational[4, 25] Pi] + 
+       Sin[Cos[Sin[Rational[3, 25] Pi]]], -Sin[1 + Rational[11, 50] Pi], 
+       1.194724220081955}, {-Cos[1 + Rational[17, 150] Pi] + 
+       Sin[Cos[Sin[Rational[19, 150] Pi]]], -Cos[1 + Rational[-6, 25] Pi], 
+       1.196816151206081}, {-Cos[1 + Rational[1, 15] Pi] + 
+       Sin[Cos[Sin[Rational[2, 15] Pi]]], -Cos[1 + Rational[-1, 5] Pi], 
+       1.1983831192111445`}, {-Cos[1 + Rational[1, 50] Pi] + 
+       Sin[Cos[Sin[Rational[7, 50] Pi]]], -Cos[1 + Rational[-4, 25] Pi], 
+       1.1994244367731897`}, {-Cos[1 + Rational[-2, 75] Pi] + 
+       Sin[Cos[Sin[Rational[11, 75] Pi]]], -Cos[1 + Rational[-3, 25] Pi], 
+       1.1999396471359178`}, {-Cos[1 + Rational[-11, 150] Pi] + 
+       Sin[Cos[Sin[Rational[23, 150] Pi]]], -Cos[1 + Rational[-2, 25] Pi], 
+       1.199928524311036}, {-Cos[1 + Rational[-3, 25] Pi] + 
+       Sin[Cos[Sin[Rational[4, 25] Pi]]], -Cos[1 + Rational[-1, 25] Pi], 
+       1.1993910731773827`}, {-Cos[1 + Rational[-1, 6] Pi] + 
+       Sin[Cos[Rational[1, 2]]], -Cos[1], 
+       1.1983275294787883`}, {-Cos[1 + Rational[-16, 75] Pi] + 
+       Sin[Cos[Sin[Rational[13, 75] Pi]]], -Cos[1 + Rational[1, 25] Pi], 
+       1.196738359720669}, {-Sin[1 + Rational[6, 25] Pi] + 
+       Sin[Cos[Sin[Rational[9, 50] Pi]]], -Cos[1 + Rational[2, 25] Pi], 
+       1.194624260965404}, {-Sin[1 + Rational[29, 150] Pi] + 
+       Sin[Cos[Sin[Rational[14, 75] Pi]]], -Cos[1 + Rational[3, 25] Pi], 
+       1.1919861605265785`}, {-Sin[1 + Rational[11, 75] Pi] + 
+       Sin[Cos[Sin[Rational[29, 150] Pi]]], -Cos[1 + Rational[4, 25] Pi], 
+       1.188825215562235}, {-Sin[1 + Rational[1, 10] Pi] + 
+       Sin[Cos[(Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+          Rational[1, 2]]], -Cos[1 + Rational[1, 5] Pi], 
+       1.1851428125673051`}, {-Sin[1 + Rational[4, 75] Pi] + 
+       Sin[Cos[Sin[Rational[31, 150] Pi]]], -Cos[1 + Rational[6, 25] Pi], 
+       1.1809405667654471`}, {-Sin[1 + Rational[1, 150] Pi] + 
+       Sin[Cos[Sin[Rational[16, 75] Pi]]], Sin[1 + Rational[-11, 50] Pi], 
+       1.1762203214005549`}, {-Sin[1 + Rational[-1, 25] Pi] + 
+       Sin[Cos[Sin[Rational[11, 50] Pi]]], Sin[1 + Rational[-9, 50] Pi], 
+       1.1709841469282514`}, {-Sin[1 + Rational[-13, 150] Pi] + 
+       Sin[Cos[Sin[Rational[17, 75] Pi]]], Sin[1 + Rational[-7, 50] Pi], 
+       1.1652343401077174`}, {-Sin[1 + Rational[-2, 15] Pi] + 
+       Sin[Cos[Sin[Rational[7, 30] Pi]]], Sin[1 + Rational[-1, 10] Pi], 
+       1.1589734229942568`}, {-Sin[1 + Rational[-9, 50] Pi] + 
+       Sin[Cos[Sin[Rational[6, 25] Pi]]], Sin[1 + Rational[-3, 50] Pi], 
+       1.1522041418330415`}, {-Sin[1 + Rational[-17, 75] Pi] + 
+       Sin[Cos[Sin[Rational[37, 150] Pi]]], Sin[1 + Rational[-1, 50] Pi], 
+       1.144929465854515}, {
+      Cos[1 + Rational[17, 75] Pi] + Sin[Cos[Cos[Rational[37, 150] Pi]]], Sin[
+       1 + Rational[1, 50] Pi], 1.1371525859719922`}, {
+      Cos[1 + Rational[9, 50] Pi] + Sin[Cos[Cos[Rational[6, 25] Pi]]], Sin[
+       1 + Rational[3, 50] Pi], 1.1288769133820176`}, {
+      Cos[1 + Rational[2, 15] Pi] + Sin[Cos[Cos[Rational[7, 30] Pi]]], Sin[
+       1 + Rational[1, 10] Pi], 1.120106078068103}, {
+      Cos[1 + Rational[13, 150] Pi] + Sin[Cos[Cos[Rational[17, 75] Pi]]], Sin[
+       1 + Rational[7, 50] Pi], 1.1108439272084956`}, {
+      Cos[1 + Rational[1, 25] Pi] + Sin[Cos[Cos[Rational[11, 50] Pi]]], Sin[
+       1 + Rational[9, 50] Pi], 1.1010945234886793`}, {
+      Cos[1 + Rational[-1, 150] Pi] + Sin[Cos[Cos[Rational[16, 75] Pi]]], Sin[
+       1 + Rational[11, 50] Pi], 1.0908621433193468`}, {
+      Cos[1 + Rational[-4, 75] Pi] + Sin[Cos[Cos[Rational[31, 150] Pi]]], Cos[
+       1 + Rational[-6, 25] Pi], 1.0801512749606235`}, {
+      Cos[1 + Rational[-1, 10] Pi] + 
+       Sin[Cos[Rational[1, 4] (1 + 5^Rational[1, 2])]], Cos[
+       1 + Rational[-1, 5] Pi], 1.0689666165533689`}, {
+      Cos[1 + Rational[-11, 75] Pi] + Sin[Cos[Cos[Rational[29, 150] Pi]]], 
+       Cos[1 + Rational[-4, 25] Pi], 1.057313074058417}, {
+      Cos[1 + Rational[-29, 150] Pi] + Sin[Cos[Cos[Rational[14, 75] Pi]]], 
+       Cos[1 + Rational[-3, 25] Pi], 1.045195759104659}, {
+      Cos[1 + Rational[-6, 25] Pi] + Sin[Cos[Cos[Rational[9, 50] Pi]]], Cos[
+       1 + Rational[-2, 25] Pi], 1.0326199867469152`}, {
+      Sin[1 + Rational[16, 75] Pi] + Sin[Cos[Cos[Rational[13, 75] Pi]]], Cos[
+       1 + Rational[-1, 25] Pi], 1.0195912731345746`}, {
+      Sin[1 + Rational[1, 6] Pi] + Sin[Cos[Rational[1, 2] 3^Rational[1, 2]]], 
+       Cos[1], 1.0061153330920303`}, {
+      Sin[1 + Rational[3, 25] Pi] + Sin[Cos[Cos[Rational[4, 25] Pi]]], Cos[
+       1 + Rational[1, 25] Pi], 0.992198077611969}, {
+      Sin[1 + Rational[11, 150] Pi] + Sin[Cos[Cos[Rational[23, 150] Pi]]], 
+       Cos[1 + Rational[2, 25] Pi], 0.9778456112626142}, {
+      Sin[1 + Rational[2, 75] Pi] + Sin[Cos[Cos[Rational[11, 75] Pi]]], Cos[
+       1 + Rational[3, 25] Pi], 0.9630642295100602}, {
+      Sin[1 + Rational[-1, 50] Pi] + Sin[Cos[Cos[Rational[7, 50] Pi]]], Cos[
+       1 + Rational[4, 25] Pi], 0.9478604159568723}, {
+      Sin[1 + Rational[-1, 15] Pi] + Sin[Cos[Cos[Rational[2, 15] Pi]]], Cos[
+       1 + Rational[1, 5] Pi], 0.9322408394981665}, {
+      Sin[1 + Rational[-17, 150] Pi] + Sin[Cos[Cos[Rational[19, 150] Pi]]], 
+       Cos[1 + Rational[6, 25] Pi], 0.9162123513964083}, {
+      Sin[1 + Rational[-4, 25] Pi] + Sin[Cos[Cos[Rational[3, 25] Pi]]], -
+       Sin[1 + Rational[-11, 50] Pi], 0.8997819822762271}, {
+      Sin[1 + Rational[-31, 150] Pi] + Sin[Cos[Cos[Rational[17, 150] Pi]]], -
+       Sin[1 + Rational[-9, 50] Pi], 
+       0.8829569390405465}, {-Cos[1 + Rational[37, 150] Pi] + 
+       Sin[Cos[Cos[Rational[8, 75] Pi]]], -Sin[1 + Rational[-7, 50] Pi], 
+       0.865744601709403}, {-Cos[1 + Rational[1, 5] Pi] + 
+       Sin[Cos[(Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+          Rational[1, 2]]], -Sin[1 + Rational[-1, 10] Pi], 
+       0.8481525201828233}, {-Cos[1 + Rational[23, 150] Pi] + 
+       Sin[Cos[Cos[Rational[7, 75] Pi]]], -Sin[1 + Rational[-3, 50] Pi], 
+       0.8301884109291883}, {-Cos[1 + Rational[8, 75] Pi] + 
+       Sin[Cos[Cos[Rational[13, 150] Pi]]], -Sin[1 + Rational[-1, 50] Pi], 
+       0.8118601536005364}, {-Cos[1 + Rational[3, 50] Pi] + 
+       Sin[Cos[Cos[Rational[2, 25] Pi]]], -Sin[1 + Rational[1, 50] Pi], 
+       0.7931757875762862}, {-Cos[1 + Rational[1, 75] Pi] + 
+       Sin[Cos[Cos[Rational[11, 150] Pi]]], -Sin[1 + Rational[3, 50] Pi], 
+       0.7741435084369002}, {-Cos[1 + Rational[-1, 30] Pi] + 
+       Sin[Cos[Cos[Rational[1, 15] Pi]]], -Sin[1 + Rational[1, 10] Pi], 
+       0.7547716643690315}, {-Cos[1 + Rational[-2, 25] Pi] + 
+       Sin[Cos[Cos[Rational[3, 50] Pi]]], -Sin[1 + Rational[7, 50] Pi], 
+       0.7350687525037344}, {-Cos[1 + Rational[-19, 150] Pi] + 
+       Sin[Cos[Cos[Rational[4, 75] Pi]]], -Sin[1 + Rational[9, 50] Pi], 
+       0.7150434151893388}, {-Cos[1 + Rational[-13, 75] Pi] + 
+       Sin[Cos[Cos[Rational[7, 150] Pi]]], -Sin[1 + Rational[11, 50] Pi], 
+       0.6947044362006362}, {-Cos[1 + Rational[-11, 50] Pi] + 
+       Sin[Cos[Cos[Rational[1, 25] Pi]]], -Cos[1 + Rational[-6, 25] Pi], 
+       0.6740607368860186}, {-Sin[1 + Rational[7, 30] Pi] + 
+       Sin[Cos[Cos[Rational[1, 30] Pi]]], -Cos[1 + Rational[-1, 5] Pi], 
+       0.6531213722542883}, {-Sin[1 + Rational[14, 75] Pi] + 
+       Sin[Cos[Cos[Rational[2, 75] Pi]]], -Cos[1 + Rational[-4, 25] Pi], 
+       0.6318955270028236}, {-Sin[1 + Rational[7, 50] Pi] + 
+       Sin[Cos[Cos[Rational[1, 50] Pi]]], -Cos[1 + Rational[-3, 25] Pi], 
+       0.610392511488873}, {-Sin[1 + Rational[7, 75] Pi] + 
+       Sin[Cos[Cos[Rational[1, 75] Pi]]], -Cos[1 + Rational[-2, 25] Pi], 
+       0.5886217576457217}, {-Sin[1 + Rational[7, 150] Pi] + 
+       Sin[Cos[Cos[Rational[1, 150] Pi]]], -Cos[1 + Rational[-1, 25] Pi], 
+       0.5665928148455369}, {-Sin[1] + Sin[Cos[1]], -Cos[1], 
+       0.5443153457106928}, {-Sin[1 + Rational[-7, 150] Pi] + 
+       Sin[Cos[Cos[Rational[1, 150] Pi]]], -Cos[1 + Rational[1, 25] Pi], 
+       0.5217991218754297}, {-Sin[1 + Rational[-7, 75] Pi] + 
+       Sin[Cos[Cos[Rational[1, 75] Pi]]], -Cos[1 + Rational[2, 25] Pi], 
+       0.49905401969969015`}, {-Sin[1 + Rational[-7, 50] Pi] + 
+       Sin[Cos[Cos[Rational[1, 50] Pi]]], -Cos[1 + Rational[3, 25] Pi], 
+       0.47609001593701983`}, {-Sin[1 + Rational[-14, 75] Pi] + 
+       Sin[Cos[Cos[Rational[2, 75] Pi]]], -Cos[1 + Rational[4, 25] Pi], 
+       0.45291718335843834`}, {-Sin[1 + Rational[-7, 30] Pi] + 
+       Sin[Cos[Cos[Rational[1, 30] Pi]]], -Cos[1 + Rational[1, 5] Pi], 
+       0.42954568633418205`}, {
+      Cos[1 + Rational[11, 50] Pi] + Sin[Cos[Cos[Rational[1, 25] Pi]]], -
+       Cos[1 + Rational[6, 25] Pi], 0.4059857763752823}, {
+      Cos[1 + Rational[13, 75] Pi] + Sin[Cos[Cos[Rational[7, 150] Pi]]], Sin[
+       1 + Rational[-11, 50] Pi], 0.3822477876369091}, {
+      Cos[1 + Rational[19, 150] Pi] + Sin[Cos[Cos[Rational[4, 75] Pi]]], Sin[
+       1 + Rational[-9, 50] Pi], 0.35834213238547125`}, {
+      Cos[1 + Rational[2, 25] Pi] + Sin[Cos[Cos[Rational[3, 50] Pi]]], Sin[
+       1 + Rational[-7, 50] Pi], 0.33427929643144993`}, {
+      Cos[1 + Rational[1, 30] Pi] + Sin[Cos[Cos[Rational[1, 15] Pi]]], Sin[
+       1 + Rational[-1, 10] Pi], 0.3100698345299807}, {
+      Cos[1 + Rational[-1, 75] Pi] + Sin[Cos[Cos[Rational[11, 150] Pi]]], Sin[
+       1 + Rational[-3, 50] Pi], 0.2857243657511818}, {
+      Cos[1 + Rational[-3, 50] Pi] + Sin[Cos[Cos[Rational[2, 25] Pi]]], Sin[
+       1 + Rational[-1, 50] Pi], 0.2612535688222869}, {
+      Cos[1 + Rational[-8, 75] Pi] + Sin[Cos[Cos[Rational[13, 150] Pi]]], Sin[
+       1 + Rational[1, 50] Pi], 0.2366681774435948}, {
+      Cos[1 + Rational[-23, 150] Pi] + Sin[Cos[Cos[Rational[7, 75] Pi]]], Sin[
+       1 + Rational[3, 50] Pi], 0.21197897558031956`}, {
+      Cos[1 + Rational[-1, 5] Pi] + 
+       Sin[Cos[(Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+          Rational[1, 2]]], Sin[1 + Rational[1, 10] Pi], 
+       0.18719679273238413`}, {
+      Cos[1 + Rational[-37, 150] Pi] + Sin[Cos[Cos[Rational[8, 75] Pi]]], Sin[
+       1 + Rational[7, 50] Pi], 0.16233249918424442`}, {
+      Sin[1 + Rational[31, 150] Pi] + Sin[Cos[Cos[Rational[17, 150] Pi]]], 
+       Sin[1 + Rational[9, 50] Pi], 0.13739700123682377`}, {
+      Sin[1 + Rational[4, 25] Pi] + Sin[Cos[Cos[Rational[3, 25] Pi]]], Sin[
+       1 + Rational[11, 50] Pi], 0.11240123642364624`}, {
+      Sin[1 + Rational[17, 150] Pi] + Sin[Cos[Cos[Rational[19, 150] Pi]]], 
+       Cos[1 + Rational[-6, 25] Pi], 0.08735616871327824}, {
+      Sin[1 + Rational[1, 15] Pi] + Sin[Cos[Cos[Rational[2, 15] Pi]]], Cos[
+       1 + Rational[-1, 5] Pi], 0.06227278370016421}, {
+      Sin[1 + Rational[1, 50] Pi] + Sin[Cos[Cos[Rational[7, 50] Pi]]], Cos[
+       1 + Rational[-4, 25] Pi], 0.037162083785984554`}, {
+      Sin[1 + Rational[-2, 75] Pi] + Sin[Cos[Cos[Rational[11, 75] Pi]]], Cos[
+       1 + Rational[-3, 25] Pi], 0.012035083353638537`}, {
+      Sin[1 + Rational[-11, 150] Pi] + Sin[Cos[Cos[Rational[23, 150] Pi]]], 
+       Cos[1 + Rational[-2, 25] Pi], -0.01309719606403014}, {
+      Sin[1 + Rational[-3, 25] Pi] + Sin[Cos[Cos[Rational[4, 25] Pi]]], Cos[
+       1 + Rational[-1, 25] Pi], -0.03822373061863928}, {
+      Sin[1 + Rational[-1, 6] Pi] + Sin[Cos[Rational[1, 2] 3^Rational[1, 2]]],
+        Cos[1], -0.06333349898169192}, {
+      Sin[1 + Rational[-16, 75] Pi] + Sin[Cos[Cos[Rational[13, 75] Pi]]], Cos[
+       1 + Rational[1, 25] Pi], -0.08841548717890002}, {-
+        Cos[1 + Rational[6, 25] Pi] + Sin[Cos[Cos[Rational[9, 50] Pi]]], Cos[
+       1 + Rational[2, 25] Pi], -0.1134586934212728}, {-
+        Cos[1 + Rational[29, 150] Pi] + Sin[Cos[Cos[Rational[14, 75] Pi]]], 
+       Cos[1 + Rational[3, 25] Pi], -0.13845213293086506`}, {-
+        Cos[1 + Rational[11, 75] Pi] + Sin[Cos[Cos[Rational[29, 150] Pi]]], 
+       Cos[1 + Rational[4, 25] Pi], -0.16338484275906862`}, {-
+        Cos[1 + Rational[1, 10] Pi] + 
+       Sin[Cos[Rational[1, 4] (1 + 5^Rational[1, 2])]], Cos[
+       1 + Rational[1, 5] Pi], -0.18824588659531846`}, {-
+        Cos[1 + Rational[4, 75] Pi] + Sin[Cos[Cos[Rational[31, 150] Pi]]], 
+       Cos[1 + Rational[6, 25] Pi], -0.2130243595641229}, {-
+        Cos[1 + Rational[1, 150] Pi] + Sin[Cos[Cos[Rational[16, 75] Pi]]], -
+       Sin[1 + Rational[-11, 50] Pi], -0.23770939300830163`}, {-
+        Cos[1 + Rational[-1, 25] Pi] + Sin[Cos[Cos[Rational[11, 50] Pi]]], -
+       Sin[1 + Rational[-9, 50] Pi], -0.262290159256338}, {-
+        Cos[1 + Rational[-13, 150] Pi] + Sin[Cos[Cos[Rational[17, 75] Pi]]], -
+       Sin[1 + Rational[-7, 50] Pi], -0.2867558763717537}, {-
+        Cos[1 + Rational[-2, 15] Pi] + Sin[Cos[Cos[Rational[7, 30] Pi]]], -
+       Sin[1 + Rational[-1, 10] Pi], -0.3110958128824219}, {-
+        Cos[1 + Rational[-9, 50] Pi] + Sin[Cos[Cos[Rational[6, 25] Pi]]], -
+       Sin[1 + Rational[-3, 50] Pi], -0.3352992924877482}, {-
+        Cos[1 + Rational[-17, 75] Pi] + Sin[Cos[Cos[Rational[37, 150] Pi]]], -
+       Sin[1 + Rational[-1, 50] Pi], -0.3593556987416436}, {-
+        Sin[1 + Rational[17, 75] Pi] + Sin[Cos[Sin[Rational[37, 150] Pi]]], -
+       Sin[1 + Rational[1, 50] Pi], -0.3832544797092534}, {-
+        Sin[1 + Rational[9, 50] Pi] + Sin[Cos[Sin[Rational[6, 25] Pi]]], -
+       Sin[1 + Rational[3, 50] Pi], -0.40698515259538437`}, {-
+        Sin[1 + Rational[2, 15] Pi] + Sin[Cos[Sin[Rational[7, 30] Pi]]], -
+       Sin[1 + Rational[1, 10] Pi], -0.43053730834260234`}, {-
+        Sin[1 + Rational[13, 150] Pi] + Sin[Cos[Sin[Rational[17, 75] Pi]]], -
+       Sin[1 + Rational[7, 50] Pi], -0.45390061619698924`}, {-
+        Sin[1 + Rational[1, 25] Pi] + Sin[Cos[Sin[Rational[11, 50] Pi]]], -
+       Sin[1 + Rational[9, 50] Pi], -0.47706482823955704`}, {-
+        Sin[1 + Rational[-1, 150] Pi] + Sin[Cos[Sin[Rational[16, 75] Pi]]], -
+       Sin[1 + Rational[11, 50] Pi], -0.500019783881319}, {-
+        Sin[1 + Rational[-4, 75] Pi] + Sin[Cos[Sin[Rational[31, 150] Pi]]], -
+       Cos[1 + Rational[-6, 25] Pi], -0.522755414320062}, {-
+        Sin[1 + Rational[-1, 10] Pi] + 
+       Sin[Cos[(Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+          Rational[1, 2]]], -
+       Cos[1 + Rational[-1, 5] Pi], -0.5452617469568564}, {-
+        Sin[1 + Rational[-11, 75] Pi] + Sin[Cos[Sin[Rational[29, 150] Pi]]], -
+       Cos[1 + Rational[-4, 25] Pi], -0.5675289097703663}, {-
+        Sin[1 + Rational[-29, 150] Pi] + Sin[Cos[Sin[Rational[14, 75] Pi]]], -
+       Cos[1 + Rational[-3, 25] Pi], -0.589547135647045}, {-
+        Sin[1 + Rational[-6, 25] Pi] + Sin[Cos[Sin[Rational[9, 50] Pi]]], -
+       Cos[1 + Rational[-2, 25] Pi], -0.6113067666653135}, {
+      Cos[1 + Rational[16, 75] Pi] + Sin[Cos[Sin[Rational[13, 75] Pi]]], -
+       Cos[1 + Rational[-1, 25] Pi], -0.6327982583318459}, {
+      Cos[1 + Rational[1, 6] Pi] + Sin[Cos[Rational[1, 2]]], -
+       Cos[1], -0.6540121837680956}, {
+      Cos[1 + Rational[3, 25] Pi] + Sin[Cos[Sin[Rational[4, 25] Pi]]], -
+       Cos[1 + Rational[1, 25] Pi], -0.6749392378452391}, {
+      Cos[1 + Rational[11, 150] Pi] + Sin[Cos[Sin[Rational[23, 150] Pi]]], -
+       Cos[1 + Rational[2, 25] Pi], -0.6955702412657144}, {
+      Cos[1 + Rational[2, 75] Pi] + Sin[Cos[Sin[Rational[11, 75] Pi]]], -
+       Cos[1 + Rational[3, 25] Pi], -0.7158961445895587}, {
+      Cos[1 + Rational[-1, 50] Pi] + Sin[Cos[Sin[Rational[7, 50] Pi]]], -
+       Cos[1 + Rational[4, 25] Pi], -0.7359080322037966}, {
+      Cos[1 + Rational[-1, 15] Pi] + Sin[Cos[Sin[Rational[2, 15] Pi]]], -
+       Cos[1 + Rational[1, 5] Pi], -0.7555971262331231}, {
+      Cos[1 + Rational[-17, 150] Pi] + Sin[Cos[Sin[Rational[19, 150] Pi]]], -
+       Cos[1 + Rational[6, 25] Pi], -0.7749547903901643}, {
+      Cos[1 + Rational[-4, 25] Pi] + Sin[Cos[Sin[Rational[3, 25] Pi]]], Sin[
+       1 + Rational[-11, 50] Pi], -0.7939725337636455}, {
+      Cos[1 + Rational[-31, 150] Pi] + Sin[Cos[Sin[Rational[17, 150] Pi]]], 
+       Sin[1 + Rational[-9, 50] Pi], -0.8126420145427803}, {
+      Sin[1 + Rational[37, 150] Pi] + Sin[Cos[Sin[Rational[8, 75] Pi]]], Sin[
+       1 + Rational[-7, 50] Pi], -0.830955043676267}, {
+      Sin[1 + Rational[1, 5] Pi] + 
+       Sin[Cos[Rational[1, 4] (-1 + 5^Rational[1, 2])]], Sin[
+       1 + Rational[-1, 10] Pi], -0.8489035884642764}, {
+      Sin[1 + Rational[23, 150] Pi] + Sin[Cos[Sin[Rational[7, 75] Pi]]], Sin[
+       1 + Rational[-3, 50] Pi], -0.8664797760818592}, {
+      Sin[1 + Rational[8, 75] Pi] + Sin[Cos[Sin[Rational[13, 150] Pi]]], Sin[
+       1 + Rational[-1, 50] Pi], -0.8836758970322283}, {
+      Sin[1 + Rational[3, 50] Pi] + Sin[Cos[Sin[Rational[2, 25] Pi]]], Sin[
+       1 + Rational[1, 50] Pi], -0.9004844085283976}, {
+      Sin[1 + Rational[1, 75] Pi] + Sin[Cos[Sin[Rational[11, 150] Pi]]], Sin[
+       1 + Rational[3, 50] Pi], -0.9168979378016978}, {
+      Sin[1 + Rational[-1, 30] Pi] + Sin[Cos[Sin[Rational[1, 15] Pi]]], Sin[
+       1 + Rational[1, 10] Pi], -0.9329092853357189}, {
+      Sin[1 + Rational[-2, 25] Pi] + Sin[Cos[Sin[Rational[3, 50] Pi]]], Sin[
+       1 + Rational[7, 50] Pi], -0.9485114280242507}, {
+      Sin[1 + Rational[-19, 150] Pi] + Sin[Cos[Sin[Rational[4, 75] Pi]]], Sin[
+       1 + Rational[9, 50] Pi], -0.9636975222518555}, {
+      Sin[1 + Rational[-13, 75] Pi] + Sin[Cos[Sin[Rational[7, 150] Pi]]], Sin[
+       1 + Rational[11, 50] Pi], -0.9784609068957002}, {
+      Sin[1 + Rational[-11, 50] Pi] + Sin[Cos[Sin[Rational[1, 25] Pi]]], Cos[
+       1 + Rational[-6, 25] Pi], -0.9927951062473451}, {-
+        Cos[1 + Rational[7, 30] Pi] + Sin[Cos[Sin[Rational[1, 30] Pi]]], Cos[
+       1 + Rational[-1, 5] Pi], -1.0066938328532042`}, {-
+        Cos[1 + Rational[14, 75] Pi] + Sin[Cos[Sin[Rational[2, 75] Pi]]], Cos[
+       1 + Rational[-4, 25] Pi], -1.0201509902724324`}, {-
+        Cos[1 + Rational[7, 50] Pi] + Sin[Cos[Sin[Rational[1, 50] Pi]]], Cos[
+       1 + Rational[-3, 25] Pi], -1.0331606757510208`}, {-
+        Cos[1 + Rational[7, 75] Pi] + Sin[Cos[Sin[Rational[1, 75] Pi]]], Cos[
+       1 + Rational[-2, 25] Pi], -1.045717182810946}, {-
+        Cos[1 + Rational[7, 150] Pi] + Sin[Cos[Sin[Rational[1, 150] Pi]]], 
+       Cos[1 + Rational[-1, 25] Pi], -1.0578150037532135`}, {-Cos[1] + Sin[1],
+        Cos[1], -1.069448832073722}, {-Cos[1 + Rational[-7, 150] Pi] + 
+       Sin[Cos[Sin[Rational[1, 150] Pi]]], Cos[
+       1 + Rational[1, 25] Pi], -1.0806135647908692`}, {-
+        Cos[1 + Rational[-7, 75] Pi] + Sin[Cos[Sin[Rational[1, 75] Pi]]], Cos[
+       1 + Rational[2, 25] Pi], -1.091304304683887}, {-
+        Cos[1 + Rational[-7, 50] Pi] + Sin[Cos[Sin[Rational[1, 50] Pi]]], Cos[
+       1 + Rational[3, 25] Pi], -1.1015163624409254`}, {-
+        Cos[1 + Rational[-14, 75] Pi] + Sin[Cos[Sin[Rational[2, 75] Pi]]], 
+       Cos[1 + Rational[4, 25] Pi], -1.111245258715941}, {-
+        Cos[1 + Rational[-7, 30] Pi] + Sin[Cos[Sin[Rational[1, 30] Pi]]], Cos[
+       1 + Rational[1, 5] Pi], -1.120486726093485}, {-
+        Sin[1 + Rational[11, 50] Pi] + Sin[Cos[Sin[Rational[1, 25] Pi]]], Cos[
+       1 + Rational[6, 25] Pi], -1.1292367109605317`}, {-
+        Sin[1 + Rational[13, 75] Pi] + Sin[Cos[Sin[Rational[7, 150] Pi]]], -
+       Sin[1 + Rational[-11, 50] Pi], -1.1374913752845282`}, {-
+        Sin[1 + Rational[19, 150] Pi] + Sin[Cos[Sin[Rational[4, 75] Pi]]], -
+       Sin[1 + Rational[-9, 50] Pi], -1.1452470982968843`}, {-
+        Sin[1 + Rational[2, 25] Pi] + Sin[Cos[Sin[Rational[3, 50] Pi]]], -
+       Sin[1 + Rational[-7, 50] Pi], -1.1525004780811567`}, {-
+        Sin[1 + Rational[1, 30] Pi] + Sin[Cos[Sin[Rational[1, 15] Pi]]], -
+       Sin[1 + Rational[-1, 10] Pi], -1.1592483330652454`}, {-
+        Sin[1 + Rational[-1, 75] Pi] + Sin[Cos[Sin[Rational[11, 150] Pi]]], -
+       Sin[1 + Rational[-3, 50] Pi], -1.1654877034169362`}, {-
+        Sin[1 + Rational[-3, 50] Pi] + Sin[Cos[Sin[Rational[2, 25] Pi]]], -
+       Sin[1 + Rational[-1, 50] Pi], -1.1712158523421796`}, {-
+        Sin[1 + Rational[-8, 75] Pi] + Sin[Cos[Sin[Rational[13, 150] Pi]]], -
+       Sin[1 + Rational[1, 50] Pi], -1.17643026728554}, {-
+        Sin[1 + Rational[-23, 150] Pi] + Sin[Cos[Sin[Rational[7, 75] Pi]]], -
+       Sin[1 + Rational[3, 50] Pi], -1.1811286610322849`}, {-
+        Sin[1 + Rational[-1, 5] Pi] + 
+       Sin[Cos[Rational[1, 4] (1 - 5^Rational[1, 2])]], -
+       Sin[1 + Rational[1, 10] Pi], -1.185308972711634}, {-
+        Sin[1 + Rational[-37, 150] Pi] + Sin[Cos[Sin[Rational[8, 75] Pi]]], -
+       Sin[1 + Rational[7, 50] Pi], -1.1889693687007237`}, {
+      Cos[1 + Rational[31, 150] Pi] + Sin[Cos[Sin[Rational[17, 150] Pi]]], -
+       Sin[1 + Rational[9, 50] Pi], -1.192108243428896}, {
+      Cos[1 + Rational[4, 25] Pi] + Sin[Cos[Sin[Rational[3, 25] Pi]]], -
+       Sin[1 + Rational[11, 50] Pi], -1.194724220081955}, {
+      Cos[1 + Rational[17, 150] Pi] + Sin[Cos[Sin[Rational[19, 150] Pi]]], -
+       Cos[1 + Rational[-6, 25] Pi], -1.196816151206081}, {
+      Cos[1 + Rational[1, 15] Pi] + Sin[Cos[Sin[Rational[2, 15] Pi]]], -
+       Cos[1 + Rational[-1, 5] Pi], -1.1983831192111445`}, {
+      Cos[1 + Rational[1, 50] Pi] + Sin[Cos[Sin[Rational[7, 50] Pi]]], -
+       Cos[1 + Rational[-4, 25] Pi], -1.1994244367731897`}, {
+      Cos[1 + Rational[-2, 75] Pi] + Sin[Cos[Sin[Rational[11, 75] Pi]]], -
+       Cos[1 + Rational[-3, 25] Pi], -1.1999396471359178`}, {
+      Cos[1 + Rational[-11, 150] Pi] + Sin[Cos[Sin[Rational[23, 150] Pi]]], -
+       Cos[1 + Rational[-2, 25] Pi], -1.199928524311036}, {
+      Cos[1 + Rational[-3, 25] Pi] + Sin[Cos[Sin[Rational[4, 25] Pi]]], -
+       Cos[1 + Rational[-1, 25] Pi], -1.1993910731773827`}, {
+      Cos[1 + Rational[-1, 6] Pi] + Sin[Cos[Rational[1, 2]]], -
+       Cos[1], -1.198327529478788}, {
+      Cos[1 + Rational[-16, 75] Pi] + Sin[Cos[Sin[Rational[13, 75] Pi]]], -
+       Cos[1 + Rational[1, 25] Pi], -1.196738359720669}, {
+      Sin[1 + Rational[6, 25] Pi] + Sin[Cos[Sin[Rational[9, 50] Pi]]], -
+       Cos[1 + Rational[2, 25] Pi], -1.194624260965404}, {
+      Sin[1 + Rational[29, 150] Pi] + Sin[Cos[Sin[Rational[14, 75] Pi]]], -
+       Cos[1 + Rational[3, 25] Pi], -1.1919861605265785`}, {
+      Sin[1 + Rational[11, 75] Pi] + Sin[Cos[Sin[Rational[29, 150] Pi]]], -
+       Cos[1 + Rational[4, 25] Pi], -1.188825215562235}, {
+      Sin[1 + Rational[1, 10] Pi] + 
+       Sin[Cos[(Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+          Rational[1, 2]]], -
+       Cos[1 + Rational[1, 5] Pi], -1.1851428125673051`}, {
+      Sin[1 + Rational[4, 75] Pi] + Sin[Cos[Sin[Rational[31, 150] Pi]]], -
+       Cos[1 + Rational[6, 25] Pi], -1.1809405667654471`}, {
+      Sin[1 + Rational[1, 150] Pi] + Sin[Cos[Sin[Rational[16, 75] Pi]]], Sin[
+       1 + Rational[-11, 50] Pi], -1.1762203214005549`}, {
+      Sin[1 + Rational[-1, 25] Pi] + Sin[Cos[Sin[Rational[11, 50] Pi]]], Sin[
+       1 + Rational[-9, 50] Pi], -1.1709841469282514`}, {
+      Sin[1 + Rational[-13, 150] Pi] + Sin[Cos[Sin[Rational[17, 75] Pi]]], 
+       Sin[1 + Rational[-7, 50] Pi], -1.1652343401077174`}, {
+      Sin[1 + Rational[-2, 15] Pi] + Sin[Cos[Sin[Rational[7, 30] Pi]]], Sin[
+       1 + Rational[-1, 10] Pi], -1.1589734229942568`}, {
+      Sin[1 + Rational[-9, 50] Pi] + Sin[Cos[Sin[Rational[6, 25] Pi]]], Sin[
+       1 + Rational[-3, 50] Pi], -1.1522041418330413`}, {
+      Sin[1 + Rational[-17, 75] Pi] + Sin[Cos[Sin[Rational[37, 150] Pi]]], 
+       Sin[1 + Rational[-1, 50] Pi], -1.1449294658545153`}, {-
+        Cos[1 + Rational[17, 75] Pi] + Sin[Cos[Cos[Rational[37, 150] Pi]]], 
+       Sin[1 + Rational[1, 50] Pi], -1.1371525859719922`}, {-
+        Cos[1 + Rational[9, 50] Pi] + Sin[Cos[Cos[Rational[6, 25] Pi]]], Sin[
+       1 + Rational[3, 50] Pi], -1.1288769133820176`}, {-
+        Cos[1 + Rational[2, 15] Pi] + Sin[Cos[Cos[Rational[7, 30] Pi]]], Sin[
+       1 + Rational[1, 10] Pi], -1.1201060780681031`}, {-
+        Cos[1 + Rational[13, 150] Pi] + Sin[Cos[Cos[Rational[17, 75] Pi]]], 
+       Sin[1 + Rational[7, 50] Pi], -1.1108439272084958`}, {-
+        Cos[1 + Rational[1, 25] Pi] + Sin[Cos[Cos[Rational[11, 50] Pi]]], Sin[
+       1 + Rational[9, 50] Pi], -1.1010945234886793`}, {-
+        Cos[1 + Rational[-1, 150] Pi] + Sin[Cos[Cos[Rational[16, 75] Pi]]], 
+       Sin[1 + Rational[11, 50] Pi], -1.0908621433193466`}, {-
+        Cos[1 + Rational[-4, 75] Pi] + Sin[Cos[Cos[Rational[31, 150] Pi]]], 
+       Cos[1 + Rational[-6, 25] Pi], -1.080151274960624}, {-
+        Cos[1 + Rational[-1, 10] Pi] + 
+       Sin[Cos[Rational[1, 4] (-1 - 5^Rational[1, 2])]], Cos[
+       1 + Rational[-1, 5] Pi], -1.068966616553369}, {-
+        Cos[1 + Rational[-11, 75] Pi] + Sin[Cos[Cos[Rational[29, 150] Pi]]], 
+       Cos[1 + Rational[-4, 25] Pi], -1.057313074058417}, {-
+        Cos[1 + Rational[-29, 150] Pi] + Sin[Cos[Cos[Rational[14, 75] Pi]]], 
+       Cos[1 + Rational[-3, 25] Pi], -1.045195759104659}, {-
+        Cos[1 + Rational[-6, 25] Pi] + Sin[Cos[Cos[Rational[9, 50] Pi]]], Cos[
+       1 + Rational[-2, 25] Pi], -1.0326199867469148`}, {-
+        Sin[1 + Rational[16, 75] Pi] + Sin[Cos[Cos[Rational[13, 75] Pi]]], 
+       Cos[1 + Rational[-1, 25] Pi], -1.0195912731345746`}, {-
+        Sin[1 + Rational[1, 6] Pi] + 
+       Sin[Cos[Rational[1, 2] 3^Rational[1, 2]]], Cos[
+       1], -1.0061153330920303`}, {-Sin[1 + Rational[3, 25] Pi] + 
+       Sin[Cos[Cos[Rational[4, 25] Pi]]], Cos[
+       1 + Rational[1, 25] Pi], -0.9921980776119688}, {-
+        Sin[1 + Rational[11, 150] Pi] + Sin[Cos[Cos[Rational[23, 150] Pi]]], 
+       Cos[
+       1 + Rational[2, 25] Pi], -0.9778456112626148}, {-
+        Sin[1 + Rational[2, 75] Pi] + Sin[Cos[Cos[Rational[11, 75] Pi]]], Cos[
+       1 + Rational[3, 25] Pi], -0.9630642295100604}, {-
+        Sin[1 + Rational[-1, 50] Pi] + Sin[Cos[Cos[Rational[7, 50] Pi]]], Cos[
+       1 + Rational[4, 25] Pi], -0.9478604159568723}, {-
+        Sin[1 + Rational[-1, 15] Pi] + Sin[Cos[Cos[Rational[2, 15] Pi]]], Cos[
+       1 + Rational[1, 5] Pi], -0.9322408394981659}, {-
+        Sin[1 + Rational[-17, 150] Pi] + Sin[Cos[Cos[Rational[19, 150] Pi]]], 
+       Cos[1 + Rational[6, 25] Pi], -0.9162123513964091}, {-
+        Sin[1 + Rational[-4, 25] Pi] + Sin[Cos[Cos[Rational[3, 25] Pi]]], -
+       Sin[1 + Rational[-11, 50] Pi], -0.8997819822762272}, {-
+        Sin[1 + Rational[-31, 150] Pi] + 
+       Sin[Cos[Cos[Rational[17, 150] Pi]]], -
+       Sin[1 + Rational[-9, 50] Pi], -0.8829569390405462}, {
+      Cos[1 + Rational[37, 150] Pi] + Sin[Cos[Cos[Rational[8, 75] Pi]]], -
+       Sin[1 + Rational[-7, 50] Pi], -0.8657446017094039}, {
+      Cos[1 + Rational[1, 5] Pi] + 
+       Sin[Cos[(Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+          Rational[1, 2]]], -
+       Sin[1 + Rational[-1, 10] Pi], -0.8481525201828236}, {
+      Cos[1 + Rational[23, 150] Pi] + Sin[Cos[Cos[Rational[7, 75] Pi]]], -
+       Sin[1 + Rational[-3, 50] Pi], -0.8301884109291884}, {
+      Cos[1 + Rational[8, 75] Pi] + Sin[Cos[Cos[Rational[13, 150] Pi]]], -
+       Sin[1 + Rational[-1, 50] Pi], -0.8118601536005361}, {
+      Cos[1 + Rational[3, 50] Pi] + Sin[Cos[Cos[Rational[2, 25] Pi]]], -
+       Sin[1 + Rational[1, 50] Pi], -0.7931757875762872}, {
+      Cos[1 + Rational[1, 75] Pi] + Sin[Cos[Cos[Rational[11, 150] Pi]]], -
+       Sin[1 + Rational[3, 50] Pi], -0.7741435084369007}, {
+      Cos[1 + Rational[-1, 30] Pi] + Sin[Cos[Cos[Rational[1, 15] Pi]]], -
+       Sin[1 + Rational[1, 10] Pi], -0.7547716643690318}, {
+      Cos[1 + Rational[-2, 25] Pi] + Sin[Cos[Cos[Rational[3, 50] Pi]]], -
+       Sin[1 + Rational[7, 50] Pi], -0.7350687525037337}, {
+      Cos[1 + Rational[-19, 150] Pi] + Sin[Cos[Cos[Rational[4, 75] Pi]]], -
+       Sin[1 + Rational[9, 50] Pi], -0.7150434151893381}, {
+      Cos[1 + Rational[-13, 75] Pi] + Sin[Cos[Cos[Rational[7, 150] Pi]]], -
+       Sin[1 + Rational[11, 50] Pi], -0.6947044362006363}, {
+      Cos[1 + Rational[-11, 50] Pi] + Sin[Cos[Cos[Rational[1, 25] Pi]]], -
+       Cos[1 + Rational[-6, 25] Pi], -0.6740607368860189}, {
+      Sin[1 + Rational[7, 30] Pi] + Sin[Cos[Cos[Rational[1, 30] Pi]]], -
+       Cos[1 + Rational[-1, 5] Pi], -0.6531213722542893}, {
+      Sin[1 + Rational[14, 75] Pi] + Sin[Cos[Cos[Rational[2, 75] Pi]]], -
+       Cos[1 + Rational[-4, 25] Pi], -0.631895527002824}, {
+      Sin[1 + Rational[7, 50] Pi] + Sin[Cos[Cos[Rational[1, 50] Pi]]], -
+       Cos[1 + Rational[-3, 25] Pi], -0.610392511488873}, {
+      Sin[1 + Rational[7, 75] Pi] + Sin[Cos[Cos[Rational[1, 75] Pi]]], -
+       Cos[1 + Rational[-2, 25] Pi], -0.5886217576457218}, {
+      Sin[1 + Rational[7, 150] Pi] + Sin[Cos[Cos[Rational[1, 150] Pi]]], -
+       Cos[1 + Rational[-1, 25] Pi], -0.5665928148455361}, {
+      Sin[1] + Sin[Cos[1]], -Cos[1], -0.5443153457106934}, {
+      Sin[1 + Rational[-7, 150] Pi] + Sin[Cos[Cos[Rational[1, 150] Pi]]], -
+       Cos[1 + Rational[1, 25] Pi], -0.5217991218754298}, {
+      Sin[1 + Rational[-7, 75] Pi] + Sin[Cos[Cos[Rational[1, 75] Pi]]], -
+       Cos[1 + Rational[2, 25] Pi], -0.49905401969968927`}, {
+      Sin[1 + Rational[-7, 50] Pi] + Sin[Cos[Cos[Rational[1, 50] Pi]]], -
+       Cos[1 + Rational[3, 25] Pi], -0.47609001593702094`}, {
+      Sin[1 + Rational[-14, 75] Pi] + Sin[Cos[Cos[Rational[2, 75] Pi]]], -
+       Cos[1 + Rational[4, 25] Pi], -0.45291718335843845`}, {
+      Sin[1 + Rational[-7, 30] Pi] + Sin[Cos[Cos[Rational[1, 30] Pi]]], -
+       Cos[1 + Rational[1, 5] Pi], -0.42954568633418216`}, {-
+        Cos[1 + Rational[11, 50] Pi] + Sin[Cos[Cos[Rational[1, 25] Pi]]], -
+       Cos[1 + Rational[6, 25] Pi], -0.40598577637528194`}, {-
+        Cos[1 + Rational[13, 75] Pi] + Sin[Cos[Cos[Rational[7, 150] Pi]]], 
+       Sin[1 + Rational[-11, 50] Pi], -0.3822477876369102}, {-
+        Cos[1 + Rational[19, 150] Pi] + Sin[Cos[Cos[Rational[4, 75] Pi]]], 
+       Sin[1 + Rational[-9, 50] Pi], -0.35834213238547136`}, {-
+        Cos[1 + Rational[2, 25] Pi] + Sin[Cos[Cos[Rational[3, 50] Pi]]], Sin[
+       1 + Rational[-7, 50] Pi], -0.33427929643145005`}, {-
+        Cos[1 + Rational[1, 30] Pi] + Sin[Cos[Cos[Rational[1, 15] Pi]]], Sin[
+       1 + Rational[-1, 10] Pi], -0.3100698345299799}, {-
+        Cos[1 + Rational[-1, 75] Pi] + Sin[Cos[Cos[Rational[11, 150] Pi]]], 
+       Sin[1 + Rational[-3, 50] Pi], -0.285724365751183}, {-
+        Cos[1 + Rational[-3, 50] Pi] + Sin[Cos[Cos[Rational[2, 25] Pi]]], Sin[
+       1 + Rational[-1, 50] Pi], -0.261253568822287}, {-
+        Cos[1 + Rational[-8, 75] Pi] + Sin[Cos[Cos[Rational[13, 150] Pi]]], 
+       Sin[1 + Rational[1, 50] Pi], -0.23666817744359442`}, {-
+        Cos[1 + Rational[-23, 150] Pi] + Sin[Cos[Cos[Rational[7, 75] Pi]]], 
+       Sin[1 + Rational[3, 50] Pi], -0.21197897558032075`}, {-
+        Cos[1 + Rational[-1, 5] Pi] + 
+       Sin[Cos[(Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+          Rational[1, 2]]], Sin[
+       1 + Rational[1, 10] Pi], -0.1871967927323848}, {-
+        Cos[1 + Rational[-37, 150] Pi] + Sin[Cos[Cos[Rational[8, 75] Pi]]], 
+       Sin[1 + Rational[7, 50] Pi], -0.16233249918424456`}, {-
+        Sin[1 + Rational[31, 150] Pi] + Sin[Cos[Cos[Rational[17, 150] Pi]]], 
+       Sin[1 + Rational[9, 50] Pi], -0.13739700123682286`}, {-
+        Sin[1 + Rational[4, 25] Pi] + Sin[Cos[Cos[Rational[3, 25] Pi]]], Sin[
+       1 + Rational[11, 50] Pi], -0.11240123642364533`}, {-
+        Sin[1 + Rational[17, 150] Pi] + Sin[Cos[Cos[Rational[19, 150] Pi]]], 
+       Cos[1 + Rational[-6, 25] Pi], -0.08735616871327892}, {-
+        Sin[1 + Rational[1, 15] Pi] + Sin[Cos[Cos[Rational[2, 15] Pi]]], Cos[
+       1 + Rational[-1, 5] Pi], -0.06227278370016436}, {-
+        Sin[1 + Rational[1, 50] Pi] + Sin[Cos[Cos[Rational[7, 50] Pi]]], Cos[
+       1 + Rational[-4, 25] Pi], -0.037162083785986295`}, {-
+        Sin[1 + Rational[-2, 75] Pi] + Sin[Cos[Cos[Rational[11, 75] Pi]]], 
+       Cos[1 + Rational[-3, 25] Pi], -0.012035083353639219`}, {-
+        Sin[1 + Rational[-11, 150] Pi] + Sin[Cos[Cos[Rational[23, 150] Pi]]], 
+       Cos[1 + Rational[-2, 25] Pi], 
+       0.013097196064029993`}, {-Sin[1 + Rational[-3, 25] Pi] + 
+       Sin[Cos[Cos[Rational[4, 25] Pi]]], Cos[1 + Rational[-1, 25] Pi], 
+       0.038223730618639144`}, {-Sin[1 + Rational[-1, 6] Pi] + 
+       Sin[Cos[Rational[1, 2] 3^Rational[1, 2]]], Cos[1], 
+       0.06333349898169284}, {-Sin[1 + Rational[-16, 75] Pi] + 
+       Sin[Cos[Cos[Rational[13, 75] Pi]]], Cos[1 + Rational[1, 25] Pi], 
+       0.08841548717889934}, {
+      Cos[1 + Rational[6, 25] Pi] + Sin[Cos[Cos[Rational[9, 50] Pi]]], Cos[
+       1 + Rational[2, 25] Pi], 0.11345869342127213`}, {
+      Cos[1 + Rational[29, 150] Pi] + Sin[Cos[Cos[Rational[14, 75] Pi]]], Cos[
+       1 + Rational[3, 25] Pi], 0.13845213293086545`}, {
+      Cos[1 + Rational[11, 75] Pi] + Sin[Cos[Cos[Rational[29, 150] Pi]]], Cos[
+       1 + Rational[4, 25] Pi], 0.1633848427590695}, {
+      Cos[1 + Rational[1, 10] Pi] + 
+       Sin[Cos[Rational[1, 4] (-1 - 5^Rational[1, 2])]], Cos[
+       1 + Rational[1, 5] Pi], 0.1882458865953178}, {
+      Cos[1 + Rational[4, 75] Pi] + Sin[Cos[Cos[Rational[31, 150] Pi]]], Cos[
+       1 + Rational[6, 25] Pi], 0.21302435956412277`}, {
+      Cos[1 + Rational[1, 150] Pi] + Sin[Cos[Cos[Rational[16, 75] Pi]]], -
+       Sin[1 + Rational[-11, 50] Pi], 0.237709393008302}, {
+      Cos[1 + Rational[-1, 25] Pi] + Sin[Cos[Cos[Rational[11, 50] Pi]]], -
+       Sin[1 + Rational[-9, 50] Pi], 0.2622901592563368}, {
+      Cos[1 + Rational[-13, 150] Pi] + Sin[Cos[Cos[Rational[17, 75] Pi]]], -
+       Sin[1 + Rational[-7, 50] Pi], 0.28675587637175304`}, {
+      Cos[1 + Rational[-2, 15] Pi] + Sin[Cos[Cos[Rational[7, 30] Pi]]], -
+       Sin[1 + Rational[-1, 10] Pi], 0.3110958128824222}, {
+      Cos[1 + Rational[-9, 50] Pi] + Sin[Cos[Cos[Rational[6, 25] Pi]]], -
+       Sin[1 + Rational[-3, 50] Pi], 0.33529929248774853`}, {
+      Cos[1 + Rational[-17, 75] Pi] + Sin[Cos[Cos[Rational[37, 150] Pi]]], -
+       Sin[1 + Rational[-1, 50] Pi], 0.35935569874164236`}, {
+      Sin[1 + Rational[17, 75] Pi] + Sin[Cos[Sin[Rational[37, 150] Pi]]], -
+       Sin[1 + Rational[1, 50] Pi], 0.3832544797092533}, {
+      Sin[1 + Rational[9, 50] Pi] + Sin[Cos[Sin[Rational[6, 25] Pi]]], -
+       Sin[1 + Rational[3, 50] Pi], 0.40698515259538476`}, {
+      Sin[1 + Rational[2, 15] Pi] + Sin[Cos[Sin[Rational[7, 30] Pi]]], -
+       Sin[1 + Rational[1, 10] Pi], 0.4305373083426008}, {
+      Sin[1 + Rational[13, 150] Pi] + Sin[Cos[Sin[Rational[17, 75] Pi]]], -
+       Sin[1 + Rational[7, 50] Pi], 0.4539006161969886}, {
+      Sin[1 + Rational[1, 25] Pi] + Sin[Cos[Sin[Rational[11, 50] Pi]]], -
+       Sin[1 + Rational[9, 50] Pi], 0.47706482823955687`}, {
+      Sin[1 + Rational[-1, 150] Pi] + Sin[Cos[Sin[Rational[16, 75] Pi]]], -
+       Sin[1 + Rational[11, 50] Pi], 0.5000197838813193}, {
+      Sin[1 + Rational[-4, 75] Pi] + Sin[Cos[Sin[Rational[31, 150] Pi]]], -
+       Cos[1 + Rational[-6, 25] Pi], 0.5227554143200609}, {
+      Sin[1 + Rational[-1, 10] Pi] + 
+       Sin[Cos[(Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+          Rational[1, 2]]], -Cos[1 + Rational[-1, 5] Pi], 
+       0.5452617469568558}, {
+      Sin[1 + Rational[-11, 75] Pi] + Sin[Cos[Sin[Rational[29, 150] Pi]]], -
+       Cos[1 + Rational[-4, 25] Pi], 0.5675289097703661}, {
+      Sin[1 + Rational[-29, 150] Pi] + Sin[Cos[Sin[Rational[14, 75] Pi]]], -
+       Cos[1 + Rational[-3, 25] Pi], 0.5895471356470453}, {
+      Sin[1 + Rational[-6, 25] Pi] + Sin[Cos[Sin[Rational[9, 50] Pi]]], -
+       Cos[1 + Rational[-2, 25] Pi], 
+       0.6113067666653147}, {-Cos[1 + Rational[16, 75] Pi] + 
+       Sin[Cos[Sin[Rational[13, 75] Pi]]], -Cos[1 + Rational[-1, 25] Pi], 
+       0.6327982583318452}, {-Cos[1 + Rational[1, 6] Pi] + 
+       Sin[Cos[Rational[1, 2]]], -Cos[1], 
+       0.6540121837680953}, {-Cos[1 + Rational[3, 25] Pi] + 
+       Sin[Cos[Sin[Rational[4, 25] Pi]]], -Cos[1 + Rational[1, 25] Pi], 
+       0.6749392378452399}, {-Cos[1 + Rational[11, 150] Pi] + 
+       Sin[Cos[Sin[Rational[23, 150] Pi]]], -Cos[1 + Rational[2, 25] Pi], 
+       0.6955702412657134}, {-Cos[1 + Rational[2, 75] Pi] + 
+       Sin[Cos[Sin[Rational[11, 75] Pi]]], -Cos[1 + Rational[3, 25] Pi], 
+       0.7158961445895582}, {-Cos[1 + Rational[-1, 50] Pi] + 
+       Sin[Cos[Sin[Rational[7, 50] Pi]]], -Cos[1 + Rational[4, 25] Pi], 
+       0.7359080322037971}, {-Cos[1 + Rational[-1, 15] Pi] + 
+       Sin[Cos[Sin[Rational[2, 15] Pi]]], -Cos[1 + Rational[1, 5] Pi], 
+       0.7555971262331235}, {-Cos[1 + Rational[-17, 150] Pi] + 
+       Sin[Cos[Sin[Rational[19, 150] Pi]]], -Cos[1 + Rational[6, 25] Pi], 
+       0.7749547903901638}, {-Cos[1 + Rational[-4, 25] Pi] + 
+       Sin[Cos[Sin[Rational[3, 25] Pi]]], Sin[1 + Rational[-11, 50] Pi], 
+       0.7939725337636454}, {-Cos[1 + Rational[-31, 150] Pi] + 
+       Sin[Cos[Sin[Rational[17, 150] Pi]]], Sin[1 + Rational[-9, 50] Pi], 
+       0.8126420145427807}, {-Sin[1 + Rational[37, 150] Pi] + 
+       Sin[Cos[Sin[Rational[8, 75] Pi]]], Sin[1 + Rational[-7, 50] Pi], 
+       0.8309550436762662}, {-Sin[1 + Rational[1, 5] Pi] + 
+       Sin[Cos[Rational[1, 4] (1 - 5^Rational[1, 2])]], Sin[
+       1 + Rational[-1, 10] Pi], 
+       0.8489035884642758}, {-Sin[1 + Rational[23, 150] Pi] + 
+       Sin[Cos[Sin[Rational[7, 75] Pi]]], Sin[1 + Rational[-3, 50] Pi], 
+       0.8664797760818591}, {-Sin[1 + Rational[8, 75] Pi] + 
+       Sin[Cos[Sin[Rational[13, 150] Pi]]], Sin[1 + Rational[-1, 50] Pi], 
+       0.8836758970322285}, {-Sin[1 + Rational[3, 50] Pi] + 
+       Sin[Cos[Sin[Rational[2, 25] Pi]]], Sin[1 + Rational[1, 50] Pi], 
+       0.9004844085283966}, {-Sin[1 + Rational[1, 75] Pi] + 
+       Sin[Cos[Sin[Rational[11, 150] Pi]]], Sin[1 + Rational[3, 50] Pi], 
+       0.9168979378016977}, {-Sin[1 + Rational[-1, 30] Pi] + 
+       Sin[Cos[Sin[Rational[1, 15] Pi]]], Sin[1 + Rational[1, 10] Pi], 
+       0.9329092853357188}, {-Sin[1 + Rational[-2, 25] Pi] + 
+       Sin[Cos[Sin[Rational[3, 50] Pi]]], Sin[1 + Rational[7, 50] Pi], 
+       0.9485114280242514}, {-Sin[1 + Rational[-19, 150] Pi] + 
+       Sin[Cos[Sin[Rational[4, 75] Pi]]], Sin[1 + Rational[9, 50] Pi], 
+       0.9636975222518567}, {-Sin[1 + Rational[-13, 75] Pi] + 
+       Sin[Cos[Sin[Rational[7, 150] Pi]]], Sin[1 + Rational[11, 50] Pi], 
+       0.9784609068957001}, {-Sin[1 + Rational[-11, 50] Pi] + 
+       Sin[Cos[Sin[Rational[1, 25] Pi]]], Cos[1 + Rational[-6, 25] Pi], 
+       0.992795106247345}, {
+      Cos[1 + Rational[7, 30] Pi] + Sin[Cos[Sin[Rational[1, 30] Pi]]], Cos[
+       1 + Rational[-1, 5] Pi], 1.0066938328532036`}, {
+      Cos[1 + Rational[14, 75] Pi] + Sin[Cos[Sin[Rational[2, 75] Pi]]], Cos[
+       1 + Rational[-4, 25] Pi], 1.0201509902724317`}, {
+      Cos[1 + Rational[7, 50] Pi] + Sin[Cos[Sin[Rational[1, 50] Pi]]], Cos[
+       1 + Rational[-3, 25] Pi], 1.0331606757510208`}, {
+      Cos[1 + Rational[7, 75] Pi] + Sin[Cos[Sin[Rational[1, 75] Pi]]], Cos[
+       1 + Rational[-2, 25] Pi], 1.0457171828109457`}, {
+      Cos[1 + Rational[7, 150] Pi] + Sin[Cos[Sin[Rational[1, 150] Pi]]], Cos[
+       1 + Rational[-1, 25] Pi], 1.057815003753214}, {
+      Cos[1] + Sin[1], Cos[1], 1.069448832073722}}, CompressedData["
+1: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
+vbhvD+3V/S2pznJ/ZUBFo35ZSUQv7VVo7h5H8Z5U6PgeuSLxdB/tVd3VW++2
+pSbDPkXnZcPVfbRX9p9s76/0TgDv45tOuvb10V4lL/8vf8fXGCg0Oa5h8rmP
+9kpePXpb/74PIHIop3nW/D7aqxq/0lqN2gjwsxcZdx7+9KpBUfBJk2AQOK/x
+Fyqc3EN7FflU36Xs2U0QXCBauuhBF+2V1laZhnf5t7HJvCJPqI5De5W0u9pT
+7G4QNvDNK9UYYdFezZCuSvdXj8TT+qc0jGvaaa9UX9d9Phz4AbNPz/yw0a2Z
+9kqzJ3Lc00mxGHr4VoqcdD3tFafzyqvMTwm4duDRse3B1bRX1/uVjmQ0J2NY
+/wcltkMp7ZXQen2u7cw09F55qtlTMpf2qkshvdRCPwMLL78eGbWIp71izbJr
+0T2RjeY6urLC1h60V6OHBF7u+5aL5rs3u1oIvkemV2ndMdvVzPJRy98m00cw
+BZle3VP2OD7SVIC+ejsFr67NQqZXM4oblF3OFSGfgkdH0MU8ZHp13OHkpIjR
+Yrwx193qskgBMr1aZDkrc41zKYYU5dycuroAmV4pRkmdnSRajlpPT6lNn5JP
+e/X0eqJZ250KVJ2/9Or9yTm0V8N5rgvfi37H0kdVA5kWqbRXj6VKWlbdrEJb
+o2PJOpeiaa8i2YcuKfNVI9+R5cv2dp6nvfLpE/E4Hl2NwlqGNWeVvtB99VD8
+QFLa6bG9qf76FutjFt1XX9gHDy1XrsUPseeq1weU0H0VF2fR5fm9FiUWXHDe
+fraa7qtlRSZqBe4/0X7pdHU+3XrmrtBBWPyvsVqh/5mDBxLmtjB3hSDo3v2y
+vQ61zK6kpY79XTG9uheksmi2Tz2uUcm+siqfzdwVuhR8c5LWbcB9cmvLTot2
+MXeF24QmCfs3NaC2id7EWGn6Oogu0Yf53F0bMZk1JXRhXy/t1YEOPcHyxU14
+1DUgpNOrn/bKbJfk8InMJvwqZirl1jJAe1U0tEVq5bFm3GTrfWcKZ5D2Sm3e
++QLlcS24arPuP/LP6W6HE/PlhZc+aEHuhhuRWvzDtFe5SrEVGiqt2PZh7tsI
+oWHaq77dTzL+jm7FjKxxna/eDdFeGd2OD5NY34b2e1Kl9EWGaK84I8/Ck3Pb
+MJqrcctcdJD2KnzWNNNVu9vxCDc7MzSxn/ZqfXnhXcvydnSovHr8+N9/evW0
+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
+     "]], 0.02]},
+  Boxed->False,
+  ImageSize->{347.2509885505436, 391.9869541093199},
+  ViewPoint->{-2.06848830138444, -2.6425000061990347`, 0.43422328849776476`},
+  ViewVertical->{-0.5692106307306252, -0.23066026412528112`, 
+   0.8124750856340637}]], "Output",
+ CellChangeTimes->{{3.689781321766967*^9, 3.689781335343576*^9}, {
+  3.6897813754045973`*^9, 3.6897815043264637`*^9}}]
+}, Open  ]]
+},
+WindowSize->{815, 702},
+WindowMargins->{{95, Automatic}, {9, Automatic}},
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 11, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 133, 6, 87, "Text"],
+Cell[CellGroupData[{
+Cell[716, 30, 1356, 38, 63, "Input"],
+Cell[2075, 70, 47926, 741, 407, "Output"]
+}, Open  ]]
+}
+]
+*)
+

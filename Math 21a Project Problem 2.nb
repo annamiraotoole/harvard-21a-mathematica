@@ -1,0 +1,94 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2504,         86]
+NotebookOptionsPosition[      2146,         68]
+NotebookOutlinePosition[      2501,         84]
+CellTagsIndexPosition[      2458,         81]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+2) (1 point)  Integrate the function  Exp[-x^2-y^2-z^2]  over the Icosahedron.
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.688564758811449*^9, 3.68856476121553*^9}, {
+  3.688565305557279*^9, 3.688565308954694*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"V", "=", 
+   RowBox[{"PolyhedronData", "[", "\"\<Icosahedron\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"W", "=", 
+   RowBox[{"ConvexHullMesh", "[", 
+    RowBox[{"V", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"x", "^", "2"}]}], "-", 
+     RowBox[{"y", "^", "2"}], "-", 
+     RowBox[{"z", "^", "2"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y", ",", "z"}], "}"}], "\[Element]", "W"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.688564992843268*^9, 3.688565020391*^9}, {
+   3.688565097807334*^9, 3.688565137156793*^9}, {3.688565180189289*^9, 
+   3.688565180850176*^9}, {3.688565217841111*^9, 3.6885652221450233`*^9}, {
+   3.688565253681306*^9, 3.688565258225675*^9}, 3.6885652980728617`*^9, {
+   3.689770862277883*^9, 3.689770875344384*^9}, {3.6897710066829653`*^9, 
+   3.6897710481409807`*^9}}],
+
+Cell[BoxData["1.4964680846337721`"], "Output",
+ CellChangeTimes->{
+  3.6885651428733187`*^9, 3.688565184656534*^9, {3.6885652187539463`*^9, 
+   3.68856522269094*^9}, 3.688565301924101*^9, 3.689770418464158*^9, {
+   3.689771019485242*^9, 3.689771061154282*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 702},
+WindowMargins->{{41, Automatic}, {48, Automatic}},
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 11, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 218, 6, 68, "Text"],
+Cell[CellGroupData[{
+Cell[801, 30, 1066, 29, 63, "Input"],
+Cell[1870, 61, 260, 4, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+

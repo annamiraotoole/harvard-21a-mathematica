@@ -1,0 +1,1904 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     69796,       1903]
+NotebookOptionsPosition[     65793,       1764]
+NotebookOutlinePosition[     66639,       1797]
+CellTagsIndexPosition[     66596,       1794]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Multivariable Calculus Computer Algebra Project 2016",
+ 
+ FontColor->RGBColor[1, 0, 0]]], "Title",
+ CellChangeTimes->{{3.6560884627289762`*^9, 3.656088463238348*^9}, {
+  3.687613254966144*^9, 3.687613255071878*^9}},
+ Background->RGBColor[
+  0.9997100785839628, 0.9751735713740749, 0.47394522011139084`]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Math  21a,Fall 2016",
+ FontColor->RGBColor[0, 0, 1]]], "Subsubsection",
+ CellChangeTimes->{{3.6246214499459352`*^9, 3.624621464352089*^9}, 
+   3.624635456939678*^9, 3.65608846620893*^9, {3.6880730545685*^9, 
+   3.688073055718831*^9}}],
+
+Cell[TextData[{
+ "In this ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " 11 project (use 11.0.1.0 if possible), we try to be creative.  I will  \
+provide you with some examples. The actual problems at the very end. The \
+project is due on ",
+ StyleBox["Saturday December 3th",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" (23:59:59 midnight) ",
+  FontWeight->"Bold"],
+ "electronically by email. There is a ",
+ StyleBox["Mathematica workshop",
+  FontWeight->"Bold"],
+ " on ",
+ StyleBox["Wednesday, November 16, 2016",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ ", from 5:30-6:30 PM in Hall A. \n\nContent in a Mathematica  file is \
+organized as ",
+ StyleBox["cells",
+  FontWeight->"Bold"],
+ ". To evaluate a cell, grab the bracket to the right, holding down the shift \
+key and hit return. "
+}], "Text",
+ CellChangeTimes->{{3.624621471033049*^9, 3.624621476024826*^9}, {
+  3.6246242601428432`*^9, 3.624624295685837*^9}, {3.624624384414187*^9, 
+  3.62462439666858*^9}, {3.624624659187381*^9, 3.624624663140543*^9}, {
+  3.656088488916954*^9, 3.656088492854311*^9}, {3.656088790749353*^9, 
+  3.656088796058371*^9}, {3.6560900672386436`*^9, 3.656090075967808*^9}, {
+  3.687613300168227*^9, 3.687613314501482*^9}, {3.688074564661322*^9, 
+  3.688074613360105*^9}, {3.688075121705402*^9, 3.688075164205105*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["General  objects", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.391294299655916*^9, 
+   3.391294301255098*^9}, {3.5513708892403584`*^9, 3.551370890822588*^9}, {
+   3.551373540851437*^9, 3.551373544927227*^9}, {3.551393987169262*^9, 
+   3.55139398810396*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell["\<\
+Here is an example of an object using parametric and implicit surfaces\
+\>", "Text",
+ CellChangeTimes->{{3.552835619107067*^9, 3.552835648049598*^9}, {
+  3.552835700209592*^9, 3.552835706065175*^9}, {3.583061171178989*^9, 
+  3.583061197554338*^9}, {3.583061368353174*^9, 3.583061369393405*^9}, {
+  3.624621716863575*^9, 3.624621718718961*^9}, {3.687613951809177*^9, 
+  3.687613954954618*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"S1", "=", 
+   RowBox[{"ContourPlot3D", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}], "+", 
+       RowBox[{"z", "^", "2"}]}], "\[Equal]", "1"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+     RowBox[{"ContourStyle", "\[Rule]", "White"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"S2", "=", 
+   RowBox[{"ParametricPlot3D", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{
+        RowBox[{"2", " ", "s"}], "-", "2"}], ",", "t"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", 
+       RowBox[{"-", "0.5"}], ",", "0.5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"s", ",", 
+       RowBox[{"-", "1.5"}], ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Green"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"S3", "=", 
+   RowBox[{"ParametricPlot3D", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"2.3", "*", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"s", " ", 
+          RowBox[{"Cos", "[", "t", "]"}]}], ",", 
+         RowBox[{"-", "s"}], ",", 
+         RowBox[{"s", " ", 
+          RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}]}], "+", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"-", "1.0"}], ",", "0"}], "}"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", 
+       RowBox[{"2", " ", "Pi"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"s", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Thickness", "[", "0.1", "]"}], ",", "Red"}], "}"}]}]}], 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"S4", "=", 
+   RowBox[{"ParametricPlot3D", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"x", "*", "y"}], "]"}], ",", "y"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Thickness", "[", "0.1", "]"}], ",", "Yellow"}], "}"}]}]}], 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{"S", "=", 
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"S1", ",", "S2", ",", "S3", ",", "S4"}], "}"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+    RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+    RowBox[{"PlotRange", "\[Rule]", "All"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"ViewPoint", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"3.24", ",", "0.071", ",", 
+       RowBox[{"-", "0.97"}]}], "}"}]}], ",", 
+    RowBox[{"ViewVertical", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"0.54", ",", "0.81", ",", 
+       RowBox[{"-", "0.17"}]}], "}"}]}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.5513735488949203`*^9, 3.551373794606485*^9}, {
+  3.551373846670917*^9, 3.551374021723884*^9}, {3.5513740537372293`*^9, 
+  3.551374252246771*^9}, {3.5513742861660852`*^9, 3.55137445444561*^9}, {
+  3.5513934900659924`*^9, 3.55139351278264*^9}, {3.551394075331685*^9, 
+  3.551394085055231*^9}, {3.551394594901257*^9, 3.5513945961432323`*^9}, {
+  3.583061007747089*^9, 3.583061010626512*^9}, {3.583061060022354*^9, 
+  3.5830611454923*^9}, {3.58306120377383*^9, 3.583061293053636*^9}, {
+  3.583061332911167*^9, 3.583061333494701*^9}, {3.6880753293950043`*^9, 
+  3.6880753610980787`*^9}}],
+
+Cell["\<\
+Here is an example using basic graphics objects called \
+\[OpenCurlyDoubleQuote]Kung-Fu\[CloseCurlyDoubleQuote]\
+\>", "Text",
+ CellChangeTimes->{{3.552835619107067*^9, 3.552835648049598*^9}, {
+  3.552835700209592*^9, 3.552835706065175*^9}, {3.583061171178989*^9, 
+  3.583061182186698*^9}, {3.656088818870243*^9, 3.656088819311459*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"A1", "=", 
+   RowBox[{"{", 
+    RowBox[{"Yellow", ",", 
+     RowBox[{"Polygon", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "3", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "3", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "0", ",", "0"}], "}"}]}], "}"}], "]"}]}], "}"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"A2", "=", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Cylinder", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"2", ",", "1", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "3", ",", "3"}], "}"}]}], "}"}], ",", "0.1"}], 
+      "]"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"A3", "=", 
+   RowBox[{"{", 
+    RowBox[{"Red", ",", 
+     RowBox[{"Sphere", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "2", ",", "2.5"}], "}"}], ",", "0.6"}], "]"}]}], 
+    "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"A4", "=", 
+   RowBox[{"{", 
+    RowBox[{"Orange", ",", 
+     RowBox[{"Cuboid", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2", ",", "2", ",", "2"}], "}"}]}], "]"}]}], "}"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"A5", "=", 
+   RowBox[{"{", 
+    RowBox[{"Yellow", ",", 
+     RowBox[{"Sphere", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "3", ",", "3"}], "}"}], ",", "0.2"}], "]"}]}], 
+    "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"A6", "=", 
+   RowBox[{"{", 
+    RowBox[{"Yellow", ",", 
+     RowBox[{"Sphere", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1", ",", "0"}], "}"}], ",", "0.2"}], "]"}]}], 
+    "}"}]}], ";"}], "\n", 
+ RowBox[{"S", "=", 
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"Graphics3D", "[", 
+     RowBox[{"Scale", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"A1", ",", "A2", ",", "A3", ",", "A4", ",", "A5", ",", "A6"}],
+         "}"}], ",", "0.2"}], "]"}], "]"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+    RowBox[{"ViewPoint", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"0.51", ",", "3.30", ",", "0.494"}], "}"}]}]}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.552835581482962*^9, 3.552835585957747*^9}, {
+  3.552835669879185*^9, 3.552835678963338*^9}, {3.55283572476681*^9, 
+  3.552835741387313*^9}, {3.688075398181142*^9, 3.688075401177333*^9}}],
+
+Cell["And here, we use some polyhedra to build a scary face candy:", "Text",
+ CellChangeTimes->{{3.552835619107067*^9, 3.552835648049598*^9}, {
+  3.552835700209592*^9, 3.552835706065175*^9}, {3.583061171178989*^9, 
+  3.583061182186698*^9}, {3.656088818870243*^9, 3.656088819311459*^9}, {
+  3.688074226964107*^9, 3.688074243623856*^9}, {3.688074870084466*^9, 
+  3.68807487305088*^9}, {3.688075197731286*^9, 3.688075200816616*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"A1", "=", 
+   RowBox[{"{", 
+    RowBox[{"Yellow", ",", 
+     RowBox[{"Translate", "[", 
+      RowBox[{
+       RowBox[{"Scale", "[", 
+        RowBox[{
+         RowBox[{"PolyhedronData", "[", 
+          RowBox[{"\"\<Icosahedron\>\"", ",", "\"\<Faces\>\""}], "]"}], ",", 
+         "0.4"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"2", ",", "1", ",", "1.8"}], "}"}]}], "]"}]}], "}"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"A2", "=", 
+   RowBox[{"{", 
+    RowBox[{"Green", ",", 
+     RowBox[{"Translate", "[", 
+      RowBox[{
+       RowBox[{"Scale", "[", 
+        RowBox[{
+         RowBox[{"PolyhedronData", "[", 
+          RowBox[{"\"\<Dodecahedron\>\"", ",", "\"\<Faces\>\""}], "]"}], ",", 
+         "0.3"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2", ",", "1.8"}], "}"}]}], "]"}]}], "}"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"A3", "=", 
+   RowBox[{"{", 
+    RowBox[{"Orange", ",", 
+     RowBox[{"Sphere", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "1"}], "}"}], ",", "2.3"}], "]"}]}], 
+    "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"A4", "=", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Cone", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"1.3", ",", "1.5", ",", ".5"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], "}"}], "]"}]}], "}"}]}], 
+  ";"}], "\n", 
+ RowBox[{"S", "=", 
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"Graphics3D", "[", 
+     RowBox[{"{", 
+      RowBox[{"A1", ",", "A2", ",", "A3", ",", "A4"}], "}"}], "]"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+    RowBox[{"ViewPoint", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0.5278978285483763`", ",", "3.2368363852086115`", ",", 
+       "0.8331951140060536`"}], "}"}]}], ",", 
+    RowBox[{"ViewVertical", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0.01520449713987866`", ",", "0.37705565858746815`", ",", 
+       "0.9447318888167381`"}], "}"}]}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.688074233388373*^9, 3.68807423696173*^9}, {
+  3.688074267366111*^9, 3.688074267534555*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Polytopes", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.391294299655916*^9, 
+   3.391294301255098*^9}, {3.5513708892403584`*^9, 3.551370890822588*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"S1", "=", 
+   RowBox[{"{", 
+    RowBox[{"Yellow", ",", 
+     RowBox[{"Opacity", "[", "0.4", "]"}], ",", 
+     RowBox[{"PolyhedronData", "[", 
+      RowBox[{"\"\<Dodecahedron\>\"", ",", "\"\<Faces\>\""}], "]"}]}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"S2", "=", 
+   RowBox[{"{", 
+    RowBox[{"Green", ",", 
+     RowBox[{"Opacity", "[", "0.4", "]"}], ",", 
+     RowBox[{"PolyhedronData", "[", 
+      RowBox[{"\"\<Icosahedron\>\"", ",", "\"\<Faces\>\""}], "]"}]}], "}"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"S3", "=", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Opacity", "[", "0.4", "]"}], ",", 
+     RowBox[{"PolyhedronData", "[", 
+      RowBox[{"\"\<Octahedron\>\"", ",", "\"\<Faces\>\""}], "]"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"S4", "=", 
+   RowBox[{"{", 
+    RowBox[{"Orange", ",", 
+     RowBox[{"Opacity", "[", "0.4", "]"}], ",", 
+     RowBox[{"PolyhedronData", "[", 
+      RowBox[{"\"\<Tetrahedron\>\"", ",", "\"\<Faces\>\""}], "]"}]}], "}"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"S5", "=", 
+   RowBox[{"{", 
+    RowBox[{"Pink", ",", 
+     RowBox[{"Opacity", "[", "0.4", "]"}], ",", 
+     RowBox[{"PolyhedronData", "[", 
+      RowBox[{"\"\<Hexahedron\>\"", ",", "\"\<Faces\>\""}], "]"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"HarmonicesMundi", "=", 
+  RowBox[{"Graphics3D", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"S1", ",", "S2", ",", "S3", ",", "S4", ",", "S5"}], "}"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.391172932271504*^9, 3.39117294960389*^9}, {
+   3.391172986118857*^9, 3.391173013563845*^9}, 3.391174355608983*^9, {
+   3.43626793830755*^9, 3.436267953507837*^9}, {3.457216281831942*^9, 
+   3.457216338709767*^9}, {3.457220832190756*^9, 3.457220864914995*^9}, 
+   3.551370440953044*^9, {3.551370496546083*^9, 3.551370523513268*^9}, {
+   3.5513721140557833`*^9, 3.551372128880951*^9}, {3.551372168457741*^9, 
+   3.551372175822838*^9}, {3.551393024313675*^9, 3.5513930549860277`*^9}, {
+   3.551393115146449*^9, 3.551393129425658*^9}, 3.551393161537533*^9, {
+   3.551393246793745*^9, 3.551393258840784*^9}, 3.551393291104579*^9, {
+   3.551393354217267*^9, 3.551393446513238*^9}, 3.551394597897794*^9, {
+   3.551427145708946*^9, 3.5514271475484943`*^9}, {3.551427478307132*^9, 
+   3.551427487844974*^9}, 3.551427661274777*^9, 3.551427728289887*^9, {
+   3.552835592846744*^9, 3.55283559327824*^9}, {3.5830616018231573`*^9, 
+   3.5830616344073257`*^9}, {3.583061710166637*^9, 3.5830618301102*^9}, {
+   3.6560888536999598`*^9, 3.65608908478691*^9}, {3.656089366217589*^9, 
+   3.656089369576078*^9}, {3.688074897059332*^9, 3.688074974057495*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Region Plot", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.391294299655916*^9, 
+   3.391294301255098*^9}, {3.5513708892403584`*^9, 3.551370890822588*^9}, {
+   3.551373540851437*^9, 3.551373544927227*^9}, {3.551393987169262*^9, 
+   3.55139398810396*^9}, {3.6246216208396587`*^9, 3.6246216223433743`*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell["\<\
+To print things, we have to use closed surfaces or to make a region plot: \
+\>", "Text",
+ CellChangeTimes->{{3.552835619107067*^9, 3.552835648049598*^9}, {
+  3.552835700209592*^9, 3.552835706065175*^9}, {3.583061171178989*^9, 
+  3.583061182186698*^9}, {3.624621823806573*^9, 3.624621834277998*^9}, {
+  3.624621949501891*^9, 3.624622006364913*^9}}],
+
+Cell[BoxData[
+ RowBox[{"S", "=", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "^", "2"}], " ", 
+        RowBox[{"y", "^", "2"}]}], "+", 
+       RowBox[{
+        RowBox[{"z", "^", "2"}], " ", 
+        RowBox[{"y", "^", "2"}]}], "+", 
+       RowBox[{
+        RowBox[{"x", "^", "2"}], " ", 
+        RowBox[{"z", "^", "2"}]}]}], "\[LessEqual]", "1"}], "&&", 
+     RowBox[{
+      RowBox[{"x", "^", "2"}], "\[LessEqual]", "8.5"}], "&&", 
+     RowBox[{
+      RowBox[{"y", "^", "2"}], "\[LessEqual]", "8.5"}], "&&", 
+     RowBox[{
+      RowBox[{"z", "^", "2"}], "\[LessEqual]", "8.5"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", 
+      RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+    RowBox[{"PlotPoints", "\[Rule]", "50"}], ",", 
+    RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+    RowBox[{"ColorFunction", "\[Rule]", 
+     RowBox[{"Function", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y", ",", "z"}], "}"}], ",", 
+       RowBox[{"Hue", "[", "z", "]"}]}], "]"}]}], ",", 
+    RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.624621661176181*^9, 3.624621673093305*^9}, {
+  3.6246220449302673`*^9, 3.624622083289233*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Contour plots", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.391294299655916*^9, 
+   3.391294301255098*^9}, {3.551394348230002*^9, 3.5513943519256496`*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[
+ RowBox[{"S", "=", 
+  RowBox[{"ContourPlot3D", "[", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "^", "2"}], "+", 
+      RowBox[{"y", "^", "2"}], "+", 
+      RowBox[{"z", "^", "2"}], "+", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"5", " ", "x", " ", "y", " ", "z"}], "]"}]}], "\[Equal]", 
+     "0.14"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "0.4"}], ",", "0.4"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "0.4"}], ",", "0.4"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", 
+      RowBox[{"-", "0.4"}], ",", "0.4"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Mesh", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "5"}], "}"}]}], ",", 
+    RowBox[{"MeshStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Yellow", ",", 
+         RowBox[{"Thickness", "[", "0.001", "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Orange", ",", 
+         RowBox[{"Thickness", "[", "0.001", "]"}]}], "}"}]}], "}"}]}], ",", 
+    RowBox[{"ContourStyle", "\[Rule]", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Yellow", ",", 
+       RowBox[{"Opacity", "[", "0.8", "]"}], ",", 
+       RowBox[{"Specularity", "[", 
+        RowBox[{"White", ",", "30"}], "]"}]}], "]"}]}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+    RowBox[{"Axes", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.391294304812922*^9, 3.391294394514404*^9}, {
+   3.391294451287685*^9, 3.391294559433588*^9}, {3.391294590936908*^9, 
+   3.391294649238306*^9}, {3.391294681258044*^9, 3.391294804679342*^9}, {
+   3.551370659913837*^9, 3.551370869062491*^9}, {3.551372200299202*^9, 
+   3.551372220626001*^9}, 3.5513935258966846`*^9, 3.55139459936975*^9, {
+   3.551426690583664*^9, 3.551426813039559*^9}, {3.551426868927092*^9, 
+   3.551426902894998*^9}, {3.552835596323347*^9, 3.552835596614498*^9}, {
+   3.5830620029368143`*^9, 3.5830621925848913`*^9}, {3.688075551675268*^9, 
+   3.6880755603699636`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Parametrized surfaces", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.391294299655916*^9, 
+   3.391294301255098*^9}, {3.391294836238496*^9, 3.391294845245802*^9}, 
+   3.551394549421514*^9},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[
+ RowBox[{"S", "=", 
+  RowBox[{"ParametricPlot3D", "[", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1.2", "+", 
+       RowBox[{
+        RowBox[{"Cos", "[", 
+         RowBox[{"2", "t"}], "]"}], " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"3", " ", "s"}], "]"}]}]}], ")"}], " ", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Cos", "[", "t", "]"}], " ", 
+         RowBox[{"Sin", "[", "s", "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"Sin", "[", "t", "]"}], 
+         RowBox[{"Sin", "[", "s", "]"}]}], ",", 
+        RowBox[{"Cos", "[", "s", "]"}]}], "}"}], "/", "2"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", 
+      RowBox[{"2", "Pi"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"s", ",", "0", ",", "Pi"}], "}"}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"Directive", "[", 
+      RowBox[{
+       RowBox[{"Opacity", "[", "0.7", "]"}], ",", "Blue", ",", 
+       RowBox[{"Specularity", "[", 
+        RowBox[{"White", ",", "10"}], "]"}]}], "]"}]}], ",", 
+    RowBox[{"MeshStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Yellow", ",", 
+         RowBox[{"Thickness", "[", "0.001", "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Orange", ",", 
+         RowBox[{"Thickness", "[", "0.001", "]"}]}], "}"}]}], "}"}]}], ",", 
+    RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.391294863935956*^9, 3.391295114704661*^9}, {
+   3.391295145300047*^9, 3.391295147616584*^9}, {3.394710181345842*^9, 
+   3.394710237983827*^9}, {3.551370618917859*^9, 3.551370649528997*^9}, {
+   3.551370905149723*^9, 3.5513709052440557`*^9}, {3.551372310553226*^9, 
+   3.551372323997908*^9}, 3.5513935311525173`*^9, 3.551394601161867*^9, {
+   3.552835600260534*^9, 3.55283560052799*^9}, {3.58306223119084*^9, 
+   3.583062278689803*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Making a surface printable", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.391425515987524*^9, 
+   3.39142551700871*^9}, {3.391425963701982*^9, 3.391425964440489*^9}, {
+   3.40442742870926*^9, 3.404427441588738*^9}, {3.551371111944222*^9, 
+   3.551371113975439*^9}, 3.551394545717616*^9, {3.6781376712758017`*^9, 
+   3.678137675181313*^9}, {3.6781377108377733`*^9, 3.678137712914558*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[
+ RowBox[{"S1", "=", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"u", " ", "v"}], ",", 
+      RowBox[{"2", "u"}], ",", 
+      RowBox[{"v", "^", "2"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"u", ",", 
+      RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"v", ",", 
+      RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Thickness", "[", "0.2", "]"}], ",", "Orange"}], "}"}]}], ",", 
+    
+    RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+    RowBox[{"Axes", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.678137648697113*^9, 3.678137648698214*^9}, {
+  3.688073157339822*^9, 3.688073210973691*^9}, {3.688074322165577*^9, 
+  3.688074329055077*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["A printable Mesh", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.391425515987524*^9, 
+   3.39142551700871*^9}, {3.391425963701982*^9, 3.391425964440489*^9}, {
+   3.40442742870926*^9, 3.404427441588738*^9}, {3.551371111944222*^9, 
+   3.551371113975439*^9}, 3.551394545717616*^9, {3.6781376712758017`*^9, 
+   3.6781377037678347`*^9}, {3.688075227975812*^9, 3.688075230204762*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"XX", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"u", " ", "v"}], ",", 
+     RowBox[{"2", "u"}], ",", 
+     RowBox[{"v", "^", "2"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"S1", "=", 
+   RowBox[{"Graphics3D", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Hue", "[", 
+         RowBox[{
+          RowBox[{"Abs", "[", "v", "]"}], "/", "2"}], "]"}], ",", 
+        RowBox[{"Tube", "[", 
+         RowBox[{"Table", "[", 
+          RowBox[{"XX", ",", 
+           RowBox[{"{", 
+            RowBox[{"u", ",", 
+             RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "}"}]}], "]"}], 
+         "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"v", ",", 
+        RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"S2", "=", 
+   RowBox[{"Graphics3D", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Hue", "[", 
+         RowBox[{
+          RowBox[{"Abs", "[", "u", "]"}], "/", "2"}], "]"}], ",", 
+        RowBox[{"Tube", "[", 
+         RowBox[{"Table", "[", 
+          RowBox[{"XX", ",", 
+           RowBox[{"{", 
+            RowBox[{"v", ",", 
+             RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "}"}]}], "]"}], 
+         "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"u", ",", 
+        RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{"SS", "=", 
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"S1", ",", "S2"}], "}"}], ",", 
+    RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+    RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+    RowBox[{"Axes", "\[Rule]", "False"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.678137687695942*^9, 3.6781376876984243`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Using Textures", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.391294299655916*^9, 
+   3.391294301255098*^9}, {3.391294836238496*^9, 3.391294845245802*^9}, 
+   3.551394549421514*^9, {3.6246235672589703`*^9, 3.624623568874116*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"picture", "=", 
+   RowBox[{
+   "Import", "[", 
+    "\"\<http://www.math.harvard.edu/archive/21a_fall_11/donald.jpg\>\"", 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"2", "+", 
+      RowBox[{"Sin", "[", "t", "]"}]}], ")"}], " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Cos", "[", "t", "]"}], " ", 
+       RowBox[{"Sin", "[", "s", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"Sin", "[", "t", "]"}], " ", 
+       RowBox[{"Sin", "[", "s", "]"}]}], ",", 
+      RowBox[{"Cos", "[", "s", "]"}]}], "}"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", "0", ",", "Pi"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}], ",", 
+   RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+   RowBox[{"PlotPoints", "\[Rule]", "40"}], ",", 
+   RowBox[{"TextureCoordinateFunction", "\[Rule]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#5", ",", "#4"}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Texture", "[", "picture", "]"}], "}"}]}], ",", 
+   RowBox[{"ViewPoint", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "3.25"}], ",", 
+      RowBox[{"-", "0.9"}], ",", 
+      RowBox[{"-", "0.2"}]}], "}"}]}], ",", 
+   RowBox[{"ViewVertical", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "0.64"}], ",", 
+      RowBox[{"-", "0.05"}], ",", 
+      RowBox[{"-", "0.9"}]}], "}"}]}], ",", 
+   RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+   RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.624623551722352*^9, 3.624623551722747*^9}, {
+  3.6246236114950314`*^9, 3.624623615803767*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The Kissing problem of spheres", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.391425515987524*^9, 
+   3.39142551700871*^9}, {3.391425963701982*^9, 3.391425964440489*^9}, {
+   3.40442742870926*^9, 3.404427441588738*^9}, {3.551371111944222*^9, 
+   3.551371113975439*^9}, 3.551394545717616*^9, {3.6781376712758017`*^9, 
+   3.6781377037678347`*^9}, {3.678138194058453*^9, 3.678138198848735*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "n", ",", 
+       RowBox[{"m", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Sqrt", "[", "5", "]"}], "+", "1"}], ")"}], "/", "2"}]}]}],
+       "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", 
+       RowBox[{"-", "1"}], ",", "1", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"m", ",", 
+       RowBox[{"-", "1"}], ",", "1", ",", "2"}], "}"}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "[", "s", "]"}], ",", "3"}], "]"}]}], ";", 
+  RowBox[{"s", "=", 
+   RowBox[{"Append", "[", 
+    RowBox[{"s", ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"Union", "[", 
+    RowBox[{"s", ",", 
+     RowBox[{"Map", "[", 
+      RowBox[{"RotateRight", ",", "s"}], "]"}], ",", 
+     RowBox[{"Map", "[", 
+      RowBox[{"RotateLeft", ",", "s"}], "]"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{"S", "=", 
+  RowBox[{"Graphics3D", "[", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Hue", "[", 
+        RowBox[{"Random", "[", "]"}], "]"}], ",", 
+       RowBox[{"Sphere", "[", 
+        RowBox[{"s", "[", 
+         RowBox[{"[", "k", "]"}], "]"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "12"}], "}"}]}], "]"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.678138180871914*^9, 3.678138180873959*^9}, 
+   3.6880738486176653`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["A torus with some decoration", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.391425515987524*^9, 
+   3.39142551700871*^9}, {3.391425963701982*^9, 3.391425964440489*^9}, {
+   3.40442742870926*^9, 3.404427441588738*^9}, {3.551371111944222*^9, 
+   3.551371113975439*^9}, 3.551394545717616*^9, {3.6781376712758017`*^9, 
+   3.6781377037678347`*^9}, {3.678138194058453*^9, 3.6781382257339363`*^9}, {
+   3.678138292029684*^9, 3.6781383040223103`*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"M", "=", "130"}], ";", 
+  RowBox[{"a", "=", "10"}], ";", 
+  RowBox[{"n", "=", "13"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"r", "[", "t_", "]"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"a", "+", 
+        RowBox[{"2", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"n", " ", "t"}], "]"}]}]}], ")"}], 
+      RowBox[{"Cos", "[", "t", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"a", "+", 
+        RowBox[{"2", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"n", " ", "t"}], "]"}]}]}], ")"}], 
+      RowBox[{"Sin", "[", "t", "]"}]}], ",", 
+     RowBox[{"3", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"n", " ", "t"}], "]"}]}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"S1", "=", 
+   RowBox[{"{", 
+    RowBox[{"Red", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Sphere", "[", 
+        RowBox[{
+         RowBox[{"r", "[", "t", "]"}], ",", "0.5"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", 
+         RowBox[{
+          RowBox[{"2", "Pi"}], "-", 
+          RowBox[{"2", 
+           RowBox[{"Pi", "/", "M"}]}]}], ",", 
+         RowBox[{"2", 
+          RowBox[{"Pi", "/", "M"}]}]}], "}"}]}], "]"}]}], "}"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"S2", "=", 
+   RowBox[{"{", 
+    RowBox[{"Blue", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Cylinder", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"r", "[", "t", "]"}], ",", 
+           RowBox[{"r", "[", 
+            RowBox[{"t", "+", 
+             RowBox[{"2", 
+              RowBox[{"Pi", "/", "M"}]}]}], "]"}]}], "}"}], ",", "0.2"}], 
+        "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", 
+         RowBox[{
+          RowBox[{"2", "Pi"}], "-", 
+          RowBox[{"2", 
+           RowBox[{"Pi", "/", "M"}]}]}], ",", 
+         RowBox[{"2", 
+          RowBox[{"Pi", "/", "M"}]}]}], "}"}]}], "]"}]}], "}"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"S3", "=", 
+   RowBox[{"ParametricPlot3D", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"a", "+", 
+          RowBox[{"2", 
+           RowBox[{"Cos", "[", "s", "]"}]}]}], ")"}], 
+        RowBox[{"Cos", "[", "t", "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"a", "+", 
+          RowBox[{"2", 
+           RowBox[{"Cos", "[", "s", "]"}]}]}], ")"}], 
+        RowBox[{"Sin", "[", "t", "]"}]}], ",", 
+       RowBox[{"2", 
+        RowBox[{"Sin", "[", "s", "]"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", 
+       RowBox[{"2", "Pi"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"s", ",", "0", ",", 
+       RowBox[{"2", "Pi"}]}], "}"}], ",", 
+     RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Yellow"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{"S", "=", 
+  RowBox[{"Graphics3D", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"S1", ",", "S2", ",", 
+      RowBox[{"S3", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "}"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+    RowBox[{"AspectRatio", "\[Rule]", "1"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.678138281917055*^9, 3.67813828191901*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sierpinski pyramid", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.391425515987524*^9, 
+   3.39142551700871*^9}, {3.391425963701982*^9, 3.391425964440489*^9}, {
+   3.40442742870926*^9, 3.404427441588738*^9}, {3.551371111944222*^9, 
+   3.551371113975439*^9}, 3.551394545717616*^9, {3.6781376712758017`*^9, 
+   3.6781377037678347`*^9}, {3.678138194058453*^9, 3.6781382257339363`*^9}, {
+   3.678138292029684*^9, 3.6781383040223103`*^9}, {3.6781383524856052`*^9, 
+   3.678138356876789*^9}, {3.688073856793129*^9, 3.688073862221862*^9}, 
+   3.6880746961217127`*^9},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"s0", "=", 
+   RowBox[{"Scale", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"PolyhedronData", "[", "\"\<Tetrahedron\>\"", "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", 
+     RowBox[{"Sqrt", "[", "3", "]"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"P0", "=", 
+   RowBox[{
+    RowBox[{"Sqrt", "[", "3", "]"}], " ", 
+    RowBox[{"s0", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}], ";", 
+  RowBox[{"E0", "=", 
+   RowBox[{"s0", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "2", ",", "1"}], "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"s0", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Polygon", "[", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"P0", "[", 
+          RowBox[{"[", 
+           RowBox[{"E0", "[", 
+            RowBox[{"[", 
+             RowBox[{"k", ",", "l"}], "]"}], "]"}], "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"l", ",", 
+           RowBox[{"Length", "[", 
+            RowBox[{"E0", "[", 
+             RowBox[{"[", "k", "]"}], "]"}], "]"}]}], "}"}]}], "]"}], "]"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", 
+       RowBox[{"Length", "[", "E0", "]"}]}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"s1", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Translate", "[", 
+      RowBox[{"s0", ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{"Sqrt", "[", "2", "]"}]}], "}"}]}], "]"}], ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Translate", "[", 
+        RowBox[{"s0", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Cos", "[", 
+            RowBox[{"2", " ", "Pi", " ", 
+             RowBox[{"k", "/", "3"}]}], "]"}], ",", 
+           RowBox[{"Sin", "[", 
+            RowBox[{"2", " ", "Pi", " ", 
+             RowBox[{"k", "/", "3"}]}], "]"}], ",", "0"}], "}"}]}], "]"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"k", ",", "3"}], "}"}]}], "]"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"s2", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Translate", "[", 
+      RowBox[{"s1", ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{"2", " ", 
+          RowBox[{"Sqrt", "[", "2", "]"}]}]}], "}"}]}], "]"}], ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Translate", "[", 
+        RowBox[{"s1", ",", 
+         RowBox[{"2", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "Pi", " ", 
+              RowBox[{"k", "/", "3"}]}], "]"}], ",", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"2", " ", "Pi", " ", 
+              RowBox[{"k", "/", "3"}]}], "]"}], ",", "0"}], "}"}]}]}], "]"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"k", ",", "3"}], "}"}]}], "]"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"s3", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Translate", "[", 
+      RowBox[{"s2", ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{"4", " ", 
+          RowBox[{"Sqrt", "[", "2", "]"}]}]}], "}"}]}], "]"}], ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Translate", "[", 
+        RowBox[{"s2", ",", 
+         RowBox[{"4", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "Pi", " ", 
+              RowBox[{"k", "/", "3"}]}], "]"}], ",", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"2", " ", "Pi", " ", 
+              RowBox[{"k", "/", "3"}]}], "]"}], ",", "0"}], "}"}]}]}], "]"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"k", ",", "3"}], "}"}]}], "]"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"s4", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Translate", "[", 
+      RowBox[{"s3", ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{"8", " ", 
+          RowBox[{"Sqrt", "[", "2", "]"}]}]}], "}"}]}], "]"}], ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Translate", "[", 
+        RowBox[{"s3", ",", 
+         RowBox[{"8", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "Pi", " ", 
+              RowBox[{"k", "/", "3"}]}], "]"}], ",", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"2", " ", "Pi", " ", 
+              RowBox[{"k", "/", "3"}]}], "]"}], ",", "0"}], "}"}]}]}], "]"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"k", ",", "3"}], "}"}]}], "]"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{"S", "=", 
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"Graphics3D", "[", 
+     RowBox[{"{", 
+      RowBox[{"Yellow", ",", "s4"}], "}"}], "]"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+    RowBox[{"ViewPoint", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1.04044"}], ",", 
+       RowBox[{"-", "3.21418"}], ",", "0.191031"}], "}"}]}], ",", 
+    RowBox[{"ViewVertical", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "0.166054"}], ",", 
+       RowBox[{"-", "0.647882"}], ",", "1.14683"}], "}"}]}]}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.678138344057002*^9, 3.678138344059991*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Spherical plots", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.391425515987524*^9, 
+   3.39142551700871*^9}, {3.391425963701982*^9, 3.391425964440489*^9}, {
+   3.40442742870926*^9, 3.404427441588738*^9}, {3.551371111944222*^9, 
+   3.551371113975439*^9}, 3.551394545717616*^9},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Clear", "[", 
+   RowBox[{"s", ",", "t"}], "]"}], ";", 
+  RowBox[{"S", "=", 
+   RowBox[{"SphericalPlot3D", "[", 
+    RowBox[{
+     RowBox[{"0.1", 
+      RowBox[{"(", 
+       RowBox[{"1.4", "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"4", "t"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{"Sin", "[", "s", "]"}]}], ")"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"s", ",", "0", ",", "Pi"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", 
+       RowBox[{"2", "Pi"}]}], "}"}], ",", 
+     RowBox[{"MeshStyle", "\[Rule]", "Yellow"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", "Red", "]"}]}], ",", 
+     RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+     RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "40"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.404428485560425*^9, 3.404428489495363*^9}, {
+  3.436351939362028*^9, 3.436351952575405*^9}, {3.488229221800816*^9, 
+  3.488229235841275*^9}, {3.551371073031795*^9, 3.5513711178039827`*^9}, {
+  3.551372984937962*^9, 3.55137303700826*^9}, {3.551393588255301*^9, 
+  3.551393837639516*^9}, {3.551427044525424*^9, 3.5514270467892857`*^9}, {
+  3.55142728918836*^9, 3.5514273120522537`*^9}, {3.552835606251192*^9, 
+  3.552835606534565*^9}, {3.583062641268845*^9, 3.583062679575095*^9}, {
+  3.656091040951851*^9, 3.6560910433039618`*^9}, {3.656091076325444*^9, 
+  3.6560910811773567`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Knots", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"u", "=", 
+   RowBox[{"KnotData", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"7", ",", "3"}], "}"}], ",", "\"\<SpaceCurve\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"u", "[", "t", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", 
+       RowBox[{"2", "Pi"}], ",", 
+       RowBox[{"2", 
+        RowBox[{"Pi", "/", "400"}]}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"S", "=", 
+  RowBox[{"Graphics3D", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"Yellow", ",", 
+      RowBox[{"Tube", "[", 
+       RowBox[{"s", ",", "0.3"}], "]"}]}], "}"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.39129365518078*^9, 3.391293689669838*^9}, {
+   3.391293732458649*^9, 3.391293805654425*^9}, {3.488229063691039*^9, 
+   3.48822906681833*^9}, {3.5513710246002073`*^9, 3.551371031485011*^9}, {
+   3.551372824812315*^9, 3.551372913965411*^9}, 3.551393581813834*^9, {
+   3.5514276161279297`*^9, 3.551427618903471*^9}, {3.55283560305429*^9, 
+   3.55283560331116*^9}, {3.5830623334618998`*^9, 3.5830623655081177`*^9}, {
+   3.583062404285451*^9, 3.5830625597091703`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Cos", "[", 
+        RowBox[{
+         RowBox[{"4", "t"}], "-", "0.3"}], "]"}], ",", 
+       RowBox[{"Cos", "[", 
+        RowBox[{
+         RowBox[{"3", "t"}], "+", "0.3"}], "]"}], ",", 
+       RowBox[{"Cos", "[", 
+        RowBox[{
+         RowBox[{"5", "t"}], "+", "1"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", 
+       RowBox[{"2", "Pi"}], ",", 
+       RowBox[{"2", 
+        RowBox[{"Pi", "/", "400"}]}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"S", "=", 
+  RowBox[{"Graphics3D", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"Green", ",", 
+      RowBox[{"Tube", "[", 
+       RowBox[{"s", ",", "0.04"}], "]"}]}], "}"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.39129365518078*^9, 3.391293689669838*^9}, {
+   3.391293732458649*^9, 3.391293805654425*^9}, {3.488229063691039*^9, 
+   3.48822906681833*^9}, {3.5513710246002073`*^9, 3.551371031485011*^9}, {
+   3.551372824812315*^9, 3.551372913965411*^9}, 3.551393581813834*^9, {
+   3.5514276161279297`*^9, 3.551427618903471*^9}, {3.55283560305429*^9, 
+   3.55283560331116*^9}, {3.5830623334618998`*^9, 3.5830623655081177`*^9}, {
+   3.583062404285451*^9, 3.5830625597091703`*^9}, {3.656090135010418*^9, 
+   3.656090245276052*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Adding two knots", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.391425515987524*^9, 
+   3.39142551700871*^9}, {3.391425963701982*^9, 3.391425964440489*^9}, {
+   3.40442742870926*^9, 3.404427441588738*^9}, {3.551371111944222*^9, 
+   3.551371113975439*^9}, 3.551394545717616*^9, {3.6781376712758017`*^9, 
+   3.6781377037678347`*^9}, {3.678138194058453*^9, 3.6781382257339363`*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"u", "=", 
+   RowBox[{"KnotData", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<PretzelKnot\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "5", ",", "2"}], "}"}]}], "}"}], ",", 
+     "\"\<SpaceCurve\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"v", "=", 
+   RowBox[{"KnotData", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<TorusKnot\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"5", ",", "11"}], "}"}]}], "}"}], ",", "\"\<SpaceCurve\>\""}],
+     "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"3", 
+         RowBox[{"u", "[", "t", "]"}]}], "-", 
+        RowBox[{"4", 
+         RowBox[{"v", "[", "t", "]"}]}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", 
+         RowBox[{"2", " ", "Pi"}], ",", 
+         RowBox[{"2", 
+          RowBox[{"Pi", "/", "10000"}]}]}], "}"}]}], "]"}], ",", "100"}], 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{"S", "=", 
+  RowBox[{"Graphics3D", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Hue", "[", 
+         RowBox[{"k", "/", "100"}], "]"}], ",", 
+        RowBox[{"Tube", "[", 
+         RowBox[{
+          RowBox[{"s", "[", 
+           RowBox[{"[", "k", "]"}], "]"}], ",", 
+          RowBox[{"0.6", "+", 
+           RowBox[{"0.3", " ", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"2", " ", "Pi", " ", 
+              RowBox[{"k", "/", "100"}]}], "]"}]}]}]}], "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"k", ",", "100"}], "}"}]}], "]"}], ",", 
+    RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
+    RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+    RowBox[{"ViewPoint", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"2.08924", ",", "0.374661", ",", "2.63528"}], "}"}]}], ",", 
+    RowBox[{"ViewVertical", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"0.352599", ",", "0.875238", ",", "1.54747"}], "}"}]}]}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.678138216366908*^9, 3.67813821636928*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Built in objects", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.39129641657693*^9, 
+   3.391296417280155*^9}, {3.394713535179121*^9, 3.394713535642386*^9}, {
+   3.394714936459135*^9, 3.394714938666309*^9}, {3.436355915111141*^9, 
+   3.436355925494071*^9}, {3.551374720904212*^9, 3.551374724566822*^9}, 
+   3.552819585586388*^9},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[
+ RowBox[{"ListSurfacePlot3D", "[", 
+  RowBox[{
+   RowBox[{"ExampleData", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<Geometry3D\>\"", ",", "\"\<Horse\>\""}], "}"}], ",", 
+     "\"\<VertexData\>\""}], "]"}], ",", 
+   RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}], ",", 
+   RowBox[{"MaxPlotPoints", "\[Rule]", "50"}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "False"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Specularity", "[", 
+       RowBox[{"White", ",", "20"}], "]"}], ",", 
+      RowBox[{"Texture", "[", 
+       RowBox[{"ExampleData", "[", 
+        RowBox[{"{", 
+         RowBox[{"\"\<ColorTexture\>\"", ",", "\"\<GiraffeFur\>\""}], "}"}], 
+        "]"}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"TextureCoordinateFunction", "\[Rule]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Normalize", "[", 
+       RowBox[{"{", 
+        RowBox[{"#1", ",", "#2", ",", "#3"}], "}"}], "]"}], "&"}], ")"}]}], 
+   ",", 
+   RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+   RowBox[{"Axes", "\[Rule]", "False"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.394714707965113*^9, 3.394714728555641*^9}, {
+   3.394714764605972*^9, 3.394714781467908*^9}, {3.394714839890687*^9, 
+   3.394714940944567*^9}, {3.394714983953683*^9, 3.394715043159084*^9}, {
+   3.394715138075067*^9, 3.394715228860358*^9}, {3.436355973234406*^9, 
+   3.436355989010001*^9}, {3.436356031119117*^9, 3.436356064837328*^9}, {
+   3.436356103807753*^9, 3.436356240534125*^9}, {3.436356285496756*^9, 
+   3.436356326046205*^9}, {3.436356357008338*^9, 3.436356357307847*^9}, {
+   3.436356414976366*^9, 3.436356419825192*^9}, {3.551373305278962*^9, 
+   3.551373318939124*^9}, {3.551373369407987*^9, 3.551373399373588*^9}, {
+   3.551394758391859*^9, 3.551394763239195*^9}, 3.551394798486973*^9, {
+   3.551394836943461*^9, 3.55139487486248*^9}, {3.551394933631302*^9, 
+   3.551395007550467*^9}, {3.551395046126205*^9, 3.551395047109651*^9}, {
+   3.5513950940860043`*^9, 3.551395169316502*^9}, {3.5513952281895037`*^9, 
+   3.551395244564313*^9}, {3.58306140481145*^9, 3.5830614049636793`*^9}, {
+   3.583062702690914*^9, 3.583062709885242*^9}, {3.583062905971159*^9, 
+   3.58306292143443*^9}, {3.58306346950989*^9, 3.5830634748878727`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Scanned", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.39129641657693*^9, 
+   3.391296417280155*^9}, {3.394713535179121*^9, 3.394713535642386*^9}, {
+   3.394714936459135*^9, 3.394714938666309*^9}, {3.436355915111141*^9, 
+   3.436355925494071*^9}, {3.551374720904212*^9, 3.551374724566822*^9}, {
+   3.552819585586388*^9, 3.552819597059478*^9}, 3.552835613601867*^9, {
+   3.6246222232518053`*^9, 3.624622224027309*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell["\<\
+If you want an object (or yourself to be scanned and include, see Oliver). \
+Here is an example of a scan\
+\>", "Text",
+ CellChangeTimes->{{3.624622319059046*^9, 3.624622342506678*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"A", "=", " ", 
+   RowBox[{
+   "Import", "[", 
+    "\"\<http://www.math.harvard.edu/~knill/providence/chimera.stl\>\"", 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{"Show", "[", 
+  RowBox[{"A", ",", 
+   RowBox[{"ViewPoint", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0.16892023495048958`", ",", "3.155836044400346`", ",", 
+      RowBox[{"-", "1.209200072398217`"}]}], "}"}]}], ",", 
+   RowBox[{"ViewVertical", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "0.06887844009643537`"}], ",", "0.2939207902815811`", ",", 
+      
+      RowBox[{"-", "0.9617649676093725`"}]}], "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.624622212532144*^9, 3.6246222125324087`*^9}, {
+   3.624622252852818*^9, 3.624622258149509*^9}, {3.624622288924711*^9, 
+   3.6246222960537*^9}, {3.62462239120539*^9, 3.624622445468615*^9}, {
+   3.624622597956168*^9, 3.624622651563369*^9}, {3.624622703060248*^9, 
+   3.624622707609248*^9}, {3.656091119924684*^9, 3.656091184553842*^9}, 
+   3.656091216841153*^9, 3.678137794401002*^9, 3.678138011172592*^9, {
+   3.678138072351665*^9, 3.678138073255698*^9}, 3.688073396194949*^9, {
+   3.688073426855061*^9, 3.688073436713297*^9}, {3.688073477397488*^9, 
+   3.688073479344141*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Area  computation", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.39129641657693*^9, 
+   3.391296417280155*^9}, {3.394713535179121*^9, 3.394713535642386*^9}, {
+   3.394714936459135*^9, 3.394714938666309*^9}, {3.436355915111141*^9, 
+   3.436355925494071*^9}, {3.551374720904212*^9, 3.551374724566822*^9}, 
+   3.552819585586388*^9, {3.6466911675834293`*^9, 3.646691170215002*^9}, {
+   3.646692402510125*^9, 3.646692403645948*^9}, {3.64669292257054*^9, 
+   3.646692923442326*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[
+ RowBox[{"Area", "[", 
+  RowBox[{"ImplicitRegion", "[", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "^", "2"}], "+", 
+      RowBox[{"y", "^", "2"}]}], "<", "1"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.646694601487522*^9, 3.646694655176543*^9}, {
+  3.656089659573887*^9, 3.656089674095603*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Volume  computation", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.39129641657693*^9, 
+   3.391296417280155*^9}, {3.394713535179121*^9, 3.394713535642386*^9}, {
+   3.394714936459135*^9, 3.394714938666309*^9}, {3.436355915111141*^9, 
+   3.436355925494071*^9}, {3.551374720904212*^9, 3.551374724566822*^9}, 
+   3.552819585586388*^9, {3.6466911675834293`*^9, 3.646691170215002*^9}, {
+   3.646692402510125*^9, 3.646692403645948*^9}, {3.64669292257054*^9, 
+   3.646692923442326*^9}, {3.656089746628352*^9, 3.656089747371105*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell["\<\
+Note that the following might be different in Mathematica 10 (as well as in \
+Mathematica documentation, where DiscretizeRegion is not used). In \
+Mathematica 11, the folllwing works:\
+\>", "Text",
+ CellChangeTimes->{{3.624622319059046*^9, 3.624622342506678*^9}, {
+  3.688076681781426*^9, 3.6880767342464867`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"R", "=", 
+   RowBox[{"ImplicitRegion", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "^", "4"}], "+", 
+       RowBox[{"y", "^", "2"}], "+", 
+       RowBox[{
+        RowBox[{"z", "^", "2"}], "/", "3"}]}], "<", "1"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Volume", "[", 
+  RowBox[{"DiscretizeRegion", "[", "R", "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.646694601487522*^9, 3.646694655176543*^9}, {
+  3.656089659573887*^9, 3.656089674095603*^9}, {3.688076500318727*^9, 
+  3.688076514043971*^9}, {3.6880765761525917`*^9, 3.688076612869234*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"V", "=", 
+   RowBox[{"PolyhedronData", "[", "\"\<Octahedron\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"W", "=", 
+   RowBox[{"ConvexHullMesh", "[", 
+    RowBox[{"V", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Integrate", "[", 
+  RowBox[{"1", ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y", ",", "z"}], "}"}], " ", "\[Element]", "W"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.646693279399931*^9, 3.646693293921132*^9}, {
+  3.646694198755151*^9, 3.646694266578473*^9}, {3.646694333049803*^9, 
+  3.646694362105823*^9}, {3.6466944204897013`*^9, 3.646694422080968*^9}, {
+  3.646694468993093*^9, 3.646694559361061*^9}, {3.646694837710443*^9, 
+  3.646694938077248*^9}, {3.6466951299726477`*^9, 3.646695133076064*^9}, {
+  3.6471540991248493`*^9, 3.647154124940815*^9}, {3.647154265311843*^9, 
+  3.647154272504012*^9}, {3.647154309776498*^9, 3.647154313431967*^9}, {
+  3.647154658109878*^9, 3.6471546726533546`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Center of Mass of the Bunny", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.39129641657693*^9, 
+   3.391296417280155*^9}, {3.394713535179121*^9, 3.394713535642386*^9}, {
+   3.394714936459135*^9, 3.394714938666309*^9}, {3.436355915111141*^9, 
+   3.436355925494071*^9}, {3.551374720904212*^9, 3.551374724566822*^9}, 
+   3.552819585586388*^9, {3.6466911675834293`*^9, 3.646691170215002*^9}, {
+   3.646692402510125*^9, 3.646692403645948*^9}, {3.646692956306325*^9, 
+   3.6466929591860647`*^9}, {3.688076161652025*^9, 3.688076168281654*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"u", "=", 
+   RowBox[{"ExampleData", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Geometry3D\>\"", ",", "\"\<StanfordBunny\>\""}], "}"}], 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"DiscretizeGraphics", "[", "u", "]"}]}], ";"}], "\n", 
+ RowBox[{"NIntegrate", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y", ",", "z"}], "}"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y", ",", "z"}], "}"}], "\[Element]", " ", "s"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6466911588032846`*^9, 3.646691158803503*^9}, {
+  3.646691275816737*^9, 3.646691295408503*^9}, {3.656089715699397*^9, 
+  3.6560897161993647`*^9}, {3.656090887250395*^9, 3.656090890185701*^9}, {
+  3.688076130226945*^9, 3.688076132132531*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Moment of Inertia", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.39129641657693*^9, 
+   3.391296417280155*^9}, {3.394713535179121*^9, 3.394713535642386*^9}, {
+   3.394714936459135*^9, 3.394714938666309*^9}, {3.436355915111141*^9, 
+   3.436355925494071*^9}, {3.551374720904212*^9, 3.551374724566822*^9}, 
+   3.552819585586388*^9, {3.6466911675834293`*^9, 3.646691170215002*^9}, {
+   3.646692402510125*^9, 3.646692403645948*^9}, {3.646692956306325*^9, 
+   3.6466929591860647`*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"V", "=", 
+   RowBox[{"PolyhedronData", "[", "\"\<Octahedron\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"W", "=", 
+   RowBox[{"ConvexHullMesh", "[", 
+    RowBox[{"V", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"NIntegrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "2"}], "+", 
+    RowBox[{"y", "^", "2"}]}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y", ",", "z"}], "}"}], " ", "\[Element]", "W"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.646693279399931*^9, 3.646693293921132*^9}, {
+   3.646694198755151*^9, 3.646694266578473*^9}, {3.646694333049803*^9, 
+   3.646694362105823*^9}, {3.6466944204897013`*^9, 3.646694422080968*^9}, {
+   3.646694468993093*^9, 3.646694559361061*^9}, {3.646694837710443*^9, 
+   3.646694938077248*^9}, {3.6466951420133467`*^9, 3.646695152588489*^9}, {
+   3.6471539695114527`*^9, 3.64715397118346*^9}, {3.647154046158944*^9, 
+   3.64715405778806*^9}, {3.647154377887578*^9, 3.647154381937483*^9}, 
+   3.647154980083077*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Assignment", "Subsection",
+ CellChangeTimes->{
+  3.391174281666443*^9, {3.39117433927073*^9, 3.391174369154411*^9}, {
+   3.391174934823854*^9, 3.391174942580306*^9}, {3.39129343846119*^9, 
+   3.391293440348383*^9}, {3.391293644005902*^9, 3.391293647006898*^9}, {
+   3.391296345968271*^9, 3.391296350111545*^9}, {3.39129641657693*^9, 
+   3.391296417280155*^9}, {3.394713535179121*^9, 3.39471354781852*^9}, {
+   3.404511510161837*^9, 3.404511545742879*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell["\<\
+Be creative. If you use inspiration beyond these templates, give credit. Use \
+the above templates to do the following: 
+
+1) (1 points) Find the volume of the region x^8+y^8+z^6<1.
+2) (1 point)  Integrate the function  Exp[-x^2-y^2-z^2]  over the \
+Icosahedron.
+3) (1 point)   A region plot of a new solid of your choice  (math candy!) 
+4) (1 point)  A new parametrized surface of your choice, make it printable. 
+5) (1 point)  A new knot of your choice.
+6) (5 points) An object of your choice using various parts using Graphics3D
+
+The objects in 3-6 have to be original. In 6) be creative. Experiment to make \
+it look good. The best objects will be selected for an exhibit. 
+Submit your notebook after removing all the graphics in the above menu Cell \
+-> Delete All Output. If you should use additional resources like textures 
+or scanned objects, send them too or provide a link to a download page. 
+\
+\>", "Text",
+ CellChangeTimes->{{3.6246215139043694`*^9, 3.624621528504211*^9}, {
+   3.6246235002993717`*^9, 3.624623507731148*^9}, {3.624623633050889*^9, 
+   3.624623656634047*^9}, {3.624624140551874*^9, 3.6246242449981413`*^9}, {
+   3.6560894149946423`*^9, 3.656089530817573*^9}, 3.656089610497243*^9, {
+   3.656089819529101*^9, 3.656089911821577*^9}, {3.656090006410139*^9, 
+   3.656090008992628*^9}, {3.656090262330007*^9, 3.6560904887241707`*^9}, {
+   3.656090875551518*^9, 3.656090880207947*^9}, {3.656090910377131*^9, 
+   3.656090921534129*^9}, {3.656154991536747*^9, 3.656154996256268*^9}, {
+   3.688074352914353*^9, 3.6880743559076242`*^9}, {3.688074422922061*^9, 
+   3.688074526662483*^9}, {3.688075075193007*^9, 3.688075080641116*^9}, {
+   3.68807527025401*^9, 3.688075292300846*^9}, {3.688076625674885*^9, 
+   3.688076641174444*^9}}],
+
+Cell["\<\
+  Oliver Knill, November 13 , 2016, email: knill@math.harvard.edu\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.624621536672447*^9, 3.6246215448244247`*^9}, {
+  3.65608954452164*^9, 3.65608955656279*^9}, {3.688072810392069*^9, 
+  3.688072813677877*^9}, {3.688075884518386*^9, 3.688075884659004*^9}},
+ Background->RGBColor[0.87, 0.94, 1]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{935, 768},
+WindowMargins->{{6, Automatic}, {0, Automatic}},
+ShowSelection->True,
+CellLabelAutoDelete->True,
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 11, \
+2016)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"Creative"}, "PastelColor.nb", CharacterEncoding -> 
+       "UTF-8"]]], 
+   Cell[
+    StyleData["Title"]], 
+   Cell[
+    StyleData["Input"]], 
+   Cell[
+    StyleData[All]], 
+   Cell[
+    StyleData["Chapter"]]}, Visible -> False, FrontEndVersion -> 
+  "10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 11, 2016)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 327, 6, 77, "Title"],
+Cell[CellGroupData[{
+Cell[774, 25, 258, 4, 25, "Subsubsection"],
+Cell[1035, 31, 1347, 32, 119, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2419, 68, 411, 7, 51, "Subsection"],
+Cell[2833, 77, 402, 7, 29, "Text"],
+Cell[3238, 86, 4022, 108, 192, "Input"],
+Cell[7263, 196, 345, 6, 29, "Text"],
+Cell[7611, 204, 2603, 84, 141, "Input"],
+Cell[10217, 290, 429, 5, 29, "Text"],
+Cell[10649, 297, 2186, 68, 141, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12872, 370, 305, 5, 51, "Subsection"],
+Cell[13180, 377, 2787, 62, 124, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16004, 444, 456, 7, 51, "Subsection"],
+Cell[16463, 453, 357, 6, 29, "Text"],
+Cell[16823, 461, 1492, 42, 73, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18352, 508, 309, 5, 51, "Subsection"],
+Cell[18664, 515, 2046, 49, 73, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20747, 569, 341, 6, 51, "Subsection"],
+Cell[21091, 577, 1961, 50, 73, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23089, 632, 685, 10, 51, "Subsection"],
+Cell[23777, 644, 894, 25, 56, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24708, 674, 675, 10, 51, "Subsection"],
+Cell[25386, 686, 1895, 59, 90, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27318, 750, 382, 6, 51, "Subsection"],
+Cell[27703, 758, 1884, 54, 107, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29624, 817, 689, 10, 51, "Subsection"],
+Cell[30316, 829, 1618, 52, 90, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31971, 886, 741, 11, 51, "Subsection"],
+Cell[32715, 899, 3291, 107, 141, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36043, 1011, 857, 13, 51, "Subsection"],
+Cell[36903, 1026, 5252, 162, 226, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42192, 1193, 574, 9, 51, "Subsection"],
+Cell[42769, 1204, 1553, 35, 73, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44359, 1244, 298, 5, 51, "Subsection"],
+Cell[44660, 1251, 1272, 33, 73, "Input"],
+Cell[45935, 1286, 1423, 37, 56, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47395, 1328, 677, 10, 51, "Subsection"],
+Cell[48075, 1340, 2132, 65, 124, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50244, 1410, 626, 10, 51, "Subsection"],
+Cell[50873, 1422, 2255, 45, 90, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53165, 1472, 715, 11, 51, "Subsection"],
+Cell[53883, 1485, 195, 4, 29, "Text"],
+Cell[54081, 1491, 1241, 27, 73, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55359, 1523, 774, 12, 51, "Subsection"],
+Cell[56136, 1537, 398, 11, 38, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56571, 1553, 822, 12, 51, "Subsection"],
+Cell[57396, 1567, 324, 6, 47, "Text"],
+Cell[57723, 1575, 693, 18, 56, "Input"],
+Cell[58419, 1595, 1093, 25, 90, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59549, 1625, 833, 12, 51, "Subsection"],
+Cell[60385, 1639, 792, 21, 73, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61214, 1665, 777, 12, 51, "Subsection"],
+Cell[61994, 1679, 1124, 28, 73, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[63155, 1712, 497, 8, 51, "Subsection"],
+Cell[63655, 1722, 1761, 30, 281, "Text"],
+Cell[65419, 1754, 346, 6, 41, "Subsubsection"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
